@@ -8,4 +8,4 @@ echo "Line2"
 
 echo -e "Line3\nLine4"
 
-echo -e "Guru\tDevOps\tBash Scripting"
+echo -e "Guru\tDevOps\tBashScripting"
