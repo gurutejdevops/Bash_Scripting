@@ -8,3 +8,4 @@ c=xyz
 
 echo a
 echo -e "$a\n$b\n$c"
+echo -e "${a}\n${b}\n${c}"
