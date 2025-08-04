@@ -1,9 +1,10 @@
 #!/bin/bash
 
-f()
+sample()
 {
-  echo "Function called with argument: $?"
-  echo "Hai"
-  echo "$$"
-  echo "$0"
+  echo "Guru- Sample function started"
+  echo "Guru - Sample function ended"
 }
+
+sample
+echo "End of the sample function"
