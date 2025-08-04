@@ -1,0 +1,9 @@
+#!/bin/bash
+
+f()
+{
+  echo "Function called with argument: $?"
+  echo "Hai"
+  echo "$$"
+  echo "$0"
+}
