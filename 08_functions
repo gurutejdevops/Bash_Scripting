@@ -7,9 +7,10 @@ hai() {
 
 sample()
 {
-  echo "Guru- Sample function started"
-  echo "Guru - Sample function ended"
-
+  echo "number of session opened: $(who | wc -l)"
+  echo "Today date is $(date +%D)"
+  echo "Avg CPU load: $(uptime | awk -F 'load average:' '{ print $2 }' | cut -d ',' -f 1)"
+  
   hai
 }
 
