@@ -1,0 +1,6 @@
+#/bin/bash
+
+#shebang Notation
+
+echo "Welcome To Bash Scripting"
+
