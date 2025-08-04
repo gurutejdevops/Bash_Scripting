@@ -1,17 +1,18 @@
 #!/bin/bash
 
+hai() {
+    echo "Guru - Hai function started"
+    echo "Guru - Hai function ended"
+}
+
 sample()
 {
   echo "Guru- Sample function started"
   echo "Guru - Sample function ended"
+
+  hai
 }
 
 sample
 
-echo "End of the sample function"
 
-sample
-
-sleep 4
-
-echo "End of the sample function 2nd time"
