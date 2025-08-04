@@ -7,4 +7,11 @@ sample()
 }
 
 sample
+
 echo "End of the sample function"
+
+sample
+
+sleep 4
+
+echo "End of the sample function 2nd time"
