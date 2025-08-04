@@ -8,5 +8,6 @@ echo $0
 echo "This script name is : $0"
 echo "India launched rocket name: $1"
 echo "Best Car not in iNdia: $2"
+echo "The value of a is : ${a}"
 echo "The variables used : $*"
 echo "The variables used : $@"
