@@ -1,5 +1,7 @@
 #!/bin/bash
 
 DATE="$(date +%D)"
+dir="$(pwd)"
 
 echo -e "Today's date is: ${DATE}"
+echo -e "Current directory is: ${dir}"
