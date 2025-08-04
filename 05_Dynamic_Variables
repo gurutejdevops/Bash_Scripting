@@ -2,6 +2,10 @@
 
 DATE="$(date +%D)"
 dir="$(pwd)"
+Session_count="$(who | wc -l)"
+
 
 echo -e "Today's date is: ${DATE}"
 echo -e "Current directory is: ${dir}"
+echo -e "Number of active sessions: ${Session_count}"
+echo -e "Script executed by: ${USER}"
