@@ -1,5 +1,5 @@
 #!/bin/bash
-
+<<COMMENT
 ACTION=$1
 
 case $ACTION in
@@ -21,3 +21,36 @@ case $ACTION in
         exit 3
         ;;
 esac
+COMMENT
+
+<<COMMENT
+
+if [ expression ]; then
+      
+      commands
+fi
+
+if [ expression ]; then
+
+    command 1
+else
+    command 2
+fi
+
+if [ expression ]; then
+
+    command1
+
+elif [ expression ]; then
+    
+    command2
+
+elif [ expression ]; then
+
+    command 3
+else 
+
+    command 4
+fi
+
+COMMENT
