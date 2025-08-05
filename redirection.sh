@@ -5,15 +5,19 @@ ACTION=$1
 case $ACTION in
     start)
         echo -e "\e[32m Payments services started \e[0m"
+        exit 0
         ;;
     stop)
         echo -e "\e[34m Payment services stopped \e[0m"
+        exit 1
         ;;
     restart)
         echo -e "\e[35m Payments services resarted \e[0m"
+        exit 2
         ;;
     *)
         echo "Valid options are start or stop or restart"
         echo -e "Ex \n\t scriptname.sh stop"
+        exit 3
         ;;
 esac
