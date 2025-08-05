@@ -2,7 +2,7 @@
 
 $ACTION=$1
 
-case $ACTION IN
+case $ACTION in
     start)
         echo "Payments services started"
         ;;
