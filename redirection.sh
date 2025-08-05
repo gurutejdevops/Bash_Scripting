@@ -1,15 +1,15 @@
 #!/bin/bash
 
-ACTION=$1
+$ACTION=$1
 
-case $ACTION in
+case $ACTION IN
     start)
-        echo "Start the payment Service"
+        echo "Payments services started"
         ;;
     stop)
-        echo "Stop the payment Service"
+        echo "Payment services stopped"
         ;;
-    restart)    
-        echo "Restart the payment Service"
-        ;;           
+    restart)
+        echo "Payments services resarted"
+        ;;
 esac
