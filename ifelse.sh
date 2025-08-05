@@ -9,12 +9,12 @@ if [ "$ACTION" == "Start" ]; then
     echo "Payment Services started"
     exit 0
 
-else if ["$ACTION" == "stop"]; then
+elif ["$ACTION" == "stop"]; then
 
     echo "Payment option is stop"
     exit 1
 
-else if ["$ACTION" == "restart"]; then
+elif ["$ACTION" == "restart"]; then
 
     echo "Payment service restarted"
     exit 2
