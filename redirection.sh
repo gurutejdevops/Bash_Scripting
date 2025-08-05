@@ -12,4 +12,8 @@ case $ACTION in
     restart)
         echo "Payments services resarted"
         ;;
+    *)
+        echo "Valid options are start or stop or restart"
+        echo -e "Ex \n\t scriptname.sh stop"
+        ;;
 esac
