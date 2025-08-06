@@ -50,3 +50,19 @@ echo -n "Extracting Frontend:"
 unzip /tmp/frontend.zip  &>> /tmp/frontend.log
 
 stat $?
+
+echo -n "sorting the frontend files:"
+mv frontend-main/* .
+mv static/* .
+rm -rf frontend-main README.md  &>> /tmp/frontend.log
+mv localhost.conf /etc/nginx/default.d/roboshop.conf
+
+stat $?
+
+echo -n "Restarting Frontend:"
+
+systemctl daemon-reload   &>> /tmp/frontend.log
+systemctl restart nginx   &>> /tmp/frontend.log
+
+stat $?
+
