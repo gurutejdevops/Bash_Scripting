@@ -27,7 +27,7 @@ stat() {
 echo "\e[35m Configuration ${COMPONENT}...........! \e[0m"
 
 echo -n "\e[36m Configuration ${COMPONENT} repo \e[0m"
-yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y
+yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y  &>> ${LOGFILE}
 stat $?
 
 echo -n "\e[37m Configuration ${COMPONENT} repo \e[0m"
