@@ -36,7 +36,7 @@ echo -e -n "\e[33m Installing ${COMPONENT} repo \e[0m"
 yum install -y mongodb-org &>> ${LOGFILE}
 
 echo -n "Enabling the visibility ${LOGFILE}:"
-sed -ie 's/127.0.0.0/0.0.0.0/g' /etc/mongod.conf
+sed -ie 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
 
 stat $?
 
