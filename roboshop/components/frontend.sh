@@ -4,11 +4,13 @@ set -e
 
 #Validate the user
 USER_ID="$(whoami)"
+COMPONENT=frontend
+LOGFILE=/tmp/${COMPONENT}.log
 
 if [ ${USER_ID} != root ] ; then
 
     echo -e "\e[31m script is expected to execute by the root user or with a sudo privilege \e[0m 
-    \n \t Example: \n\t sudo wrapper.sh frontend.sh"
+    \n \t Example: \n\t sudo wrapper.sh ${COMPONENT}.sh"
     exit 1
 fi
 
@@ -23,49 +25,49 @@ stat() {
 
 }
 
-echo -e "\e[32m Configuring Fronend \e[0m \n"
+echo -e "\e[32m Configuring ${COMPONENT} \e[0m \n"
 
-echo -e -n "\e[33m Installing Frontend \e[0m"
+echo -e -n "\e[33m Installing ${COMPONENT} \e[0m"
 
-yum install nginx -y &>> /tmp/frontend.log
+yum install nginx -y &>> ${LOGFILE}
 
 stat $?
 
 echo -n "starting nginx"
-systemctl enable nginx &>> /tmp/frontend.log
-systemctl start nginx  &>> /tmp/frontend.log
+systemctl enable nginx &>> ${LOGFILE}
+systemctl start nginx  &>> ${LOGFILE}
 
 stat $?
 
-echo -n "Downloading the frontend component"
+echo -n "Downloading the ${COMPONENT} component"
 
-curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"
 
 stat $?
 
-echo -n "Clean up Frontend:"
+echo -n "Clean up ${COMPONENT}:"
 cd /usr/share/nginx/html
-rm -rf *   &>> /tmp/frontend.log
+rm -rf *   &>> ${LOGFILE}
 
 stat $?
 
-echo -n "Extracting Frontend:"
-unzip /tmp/frontend.zip  &>> /tmp/frontend.log
+echo -n "Extracting ${COMPONENT}:"
+unzip /tmp/${COMPONENT}.zip  &>> ${LOGFILE}
 
 stat $?
 
-echo -n "sorting the frontend files:"
-mv frontend-main/* .
+echo -n "sorting the ${COMPONENT} files:"
+mv ${COMPONENT}-main/* .
 mv static/* .
-rm -rf frontend-main README.md  &>> /tmp/frontend.log
+rm -rf ${COMPONENT}-main README.md  &>> ${LOGFILE}
 mv localhost.conf /etc/nginx/default.d/roboshop.conf
 
 stat $?
 
-echo -n "Restarting Frontend:"
+echo -n "Restarting ${COMPONENT}:"
 
-systemctl daemon-reload   &>> /tmp/frontend.log
-systemctl restart nginx   &>> /tmp/frontend.log
+systemctl daemon-reload   &>> ${LOGFILE}
+systemctl restart nginx   &>> ${LOGFILE}
 
 stat $?
 
