@@ -10,7 +10,7 @@ if [ ${USER_ID} -ne 0 ] ; then
 fi
 
 stat() {
-    if [ $? -eq 0 ]; then
+    if [ $1 -eq 0 ]; then
 
         echo -e "\e[32m success \e[0m"
     else
@@ -26,16 +26,27 @@ echo -e -n "\e[33m Installing Frontend \e[0m"
 
 yum install nginx -y &>> /tmp/frontend.log
 
-stat
+stat $?
 
 echo -n "starting nginx"
 systemctl enable nginx &>> /tmp/frontend.log
 systemctl start nginx  &>> /tmp/frontend.log
 
-stat
+stat $?
 
 echo -n "Downloading the frontend component"
 
 curl -s -L -o /tmp/frontend.zip "https://github.com/stans-robot-project/frontend/archive/main.zip"
 
-stat
+stat $?
+
+echo -n "Clean up Frontend:"
+cd /usr/share/nginx/html
+rm -rf *   &>> /tmp/frontend.log
+
+stat $?
+
+echo -n "Extracting Frontend:"
+unzip /tmp/frontend.zip  &>> /tmp/frontend.log
+
+stat $?
