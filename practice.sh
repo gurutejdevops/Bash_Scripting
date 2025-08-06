@@ -11,12 +11,12 @@ if [ "${ACTION}" == "start" ]; then
 
 elif [ "${ACTION}" == "stop" ]; then
 
-    echo "Payment services started"
+    echo "Payment services stopped"
     exit 1
 
 elif [ "${ACTION}" == "restart" ]; then
 
-    echo "Payment services started"
+    echo "Payment services re-started"
     exit 2
 
 else 
