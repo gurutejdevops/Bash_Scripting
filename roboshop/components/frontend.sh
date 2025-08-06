@@ -11,9 +11,9 @@ if [ ${USER_ID} -ne 0 ] ; then
     exit 1
 fi
 
-echo -e "\e[32m Configuring Fronend \e[0m"
+echo -e "\e[32m Configuring Fronend \e[0m \n"
 
-echo -e "\e[33m Installing Frontend \e[0m"
+echo -e -n "\e[33m Installing Frontend \e[0m"
 
 yum install nginx -y &>> /tmp/frontend.log
 
