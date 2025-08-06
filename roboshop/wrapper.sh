@@ -1,3 +1,3 @@
 #!/bin/bash
 
-bash $1
+bash components/$1
