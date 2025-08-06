@@ -56,7 +56,7 @@ stat $?
 echo -n "Extracting the ${COMPONENT} schema:"
 
 cd /tmp
-unzip mongodb.zip &>> ${LOGFILE}
+unzip -o mongodb.zip &>> ${LOGFILE}
 
 stat $?
 
