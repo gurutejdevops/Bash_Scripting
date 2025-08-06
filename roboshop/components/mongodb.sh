@@ -35,12 +35,18 @@ echo -e -n "\e[33m Installing ${COMPONENT} repo \e[0m"
 
 yum install -y mongodb-org &>> ${LOGFILE}
 
+echo -n "Enabling the visibility ${LOGFILE}:"
+sed -ie 's/127.0.0.0/0.0.0.0/g' /etc/mongod.conf
+
+stat $?
+
 echo -n "starting ${COMPONENT}"
 
 systemctl enable mongod &>> ${LOGFILE}
 systemctl start mongod &>> ${LOGFILE}
 
 stat $?
+
 
 <<COMMENT
 echo -n "Downloading the ${COMPONENT} component"
