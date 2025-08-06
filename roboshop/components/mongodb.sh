@@ -33,7 +33,7 @@ stat $?
 
 echo -e -n "\e[33m Installing ${COMPONENT} repo \e[0m"
 
-yum install -y mongodb-org
+yum install -y mongodb-org &>> ${LOGFILE}
 
 echo -n "starting ${COMPONENT}"
 
