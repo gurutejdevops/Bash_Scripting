@@ -15,7 +15,7 @@ fi
 
 stat() {
 
-    if[ $1 -eq 0 ]; then
+    if [ $1 -eq 0 ]; then
 
         echo -e "\e[32m success \e[0m"
     else
@@ -23,6 +23,7 @@ stat() {
         exit 2
     fi
 }
+
 
 echo "\e[35m Configuration ${COMPONENT}...........! \e[0m"
 
