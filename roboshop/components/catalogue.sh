@@ -3,7 +3,7 @@
 USER_ID="$(whoami)"
 COMPONENT=catalogue
 LOGFILE=/tmp/${COMPONENT}.log
-APPUSER=roboshop
+#APPUSER=roboshop
 
 
 if [ ${USER_ID} != root ]; then
@@ -54,12 +54,17 @@ stat $?
 
 COMMENT
 
+echo -n -e "\e[38m Creating Application User Account \e[0m:"
+
 id ${APPUSER}  &>> ${LOGFILE}
-if [ $? -ne 0 ]; then
-    echo "Creating Application user"
+if [ $? -eq 0 ]; then
+
+    echo "Application user is already Available"
+else
     useradd roboshop
-    stat $?
 fi
+
+stat $?
 
 
 
