@@ -65,7 +65,7 @@ stat $?
 
 echo -n -e "\e[41m Changing the ownership: \e[0m"
 mv ${COMPONENT}-main ${COMPONENT}
-chown -R ${COMPONENT}:${COMPONENT} /home/${APPUSER}/${COMPONENT}/
+chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
 
 
