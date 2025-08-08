@@ -3,7 +3,6 @@
 USER_ID="$(whoami)"
 COMPONENT=catalogue
 LOGFILE=/tmp/{COMPONENT}.log
-ID="$(id roboshop)"
 
 
 if [ ${USER_ID} != root ]; then
