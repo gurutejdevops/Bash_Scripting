@@ -64,8 +64,8 @@ npm install  &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
-sed -ie 's/REDIS_ENDPOINT/172.31.39.200' /home/${APPUSER}/${COMPONENT}/systemd.service
-sed -ie 's/MONGO_ENDPOINT/172.31.32.89' /home/${APPUSER}/${COMPONENT}/systemd.service 
+sed -ie 's/REDIS_ENDPOINT/172.31.39.200/'  /home/${APPUSER}/${COMPONENT}/systemd.service
+sed -ie 's/MONGO_ENDPOINT/172.31.32.89/'  /home/${APPUSER}/${COMPONENT}/systemd.service 
 mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $?
 
