@@ -34,10 +34,12 @@ stat $?
 
 echo -n "Enabling the visibility ${COMPONENT}:"
 sed -ie 's/127.0.0.1/0.0.0.0/g' /etc/${COMPONENT}.conf
+sed -ie 's/127.0.0.1/0.0.0.0/g' /etc/redis/redis.conf
 stat $?
 
 echo -n "starting ${COMPONENT}"
 systemctl enable ${COMPONENT}      &>> ${LOGFILE}
+systemctl restart ${COMPONENT}      &>> ${LOGFILE}
 systemctl start ${COMPONENT}       &>> ${LOGFILE}
 systemctl status ${COMPONENT} -l   &>> ${LOGFILE}
 
