@@ -32,10 +32,10 @@ curl -s -o /etc/yum.repos.d/mongodb.repo https://raw.githubusercontent.com/stans
 stat $?
 
 echo -e -n "\e[33m Installing ${COMPONENT} repo \e[0m"
-
 yum install -y mongodb-org &>> ${LOGFILE}
+stat $?
 
-echo -n "Enabling the visibility ${LOGFILE}:"
+echo -n "Enabling the visibility ${COMPONENT}:"
 sed -ie 's/127.0.0.1/0.0.0.0/g' /etc/mongod.conf
 
 stat $?
