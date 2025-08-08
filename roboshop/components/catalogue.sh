@@ -57,6 +57,7 @@ id {APPUSER}  &>> ${LOGFILE}
 if [ $? -ne 0 ]; then
     echo "roboshop user is available"
     useradd roboshop
+    stat $?
 fi
 
 
