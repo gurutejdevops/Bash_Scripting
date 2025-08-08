@@ -3,7 +3,7 @@
 USER_ID="$(whoami)"
 COMPONENT=catalogue
 LOGFILE=/tmp/${COMPONENT}.log
-#APPUSER=roboshop
+APPUSER=roboshop
 
 
 if [ ${USER_ID} != root ]; then
