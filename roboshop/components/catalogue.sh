@@ -36,7 +36,9 @@ echo -n -e "\e[37m Configuration ${COMPONENT} repo \e[0m"
 yum install nodejs -y  &>> ${LOGFILE}
 stat $?
 
-echo -n -e "\e[38m Creating Application User Account \e[0m \n:"
+<<COMMENT
+
+echo -n -e "\e[38m Creating Application User Account \e[0m:"
 
 id roboshop  &>> ${LOGFILE}
 
@@ -48,6 +50,15 @@ else
 fi
 
 stat $?
+
+COMMENT
+
+id {APPUSER}  &>> ${LOGFILE}
+if [ $? -ne 0 ]; then
+    echo "roboshop user is available"
+    useradd roboshop
+fi
+
 
 
 
