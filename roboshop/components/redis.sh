@@ -2,7 +2,7 @@
 
 COMPONENT=redis
 USER_ID="$(whoami)"
-LOGFILE=/tmp/${REDIS}.log
+LOGFILE=/tmp/${COMPONENT}.log
 
 
 
