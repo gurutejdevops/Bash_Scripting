@@ -69,8 +69,8 @@ chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
 
 echo -n -e "\e[90m Generating Artifacts \e[0m"
-cd /home/${APPUSER}/${COMPONENT}  
-$ npm install  &>> ${LOGFILE}
+cd /home/${APPUSER}/${COMPONENT}/  
+npm install  &>> ${LOGFILE}
 stat $?
 
 
