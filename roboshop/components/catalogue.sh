@@ -74,8 +74,8 @@ npm install  &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
-sed -ie 's/MONGO_DNSNAME/172.31.32.89/' /home/${APPUSER}/${COMPONENT}/systemd.servicee
-mv /home/${APPUSER}/${COMPONENT}/systemd.servicee /etc/systemd/system/${COMPONENT}.service
+sed -ie 's/MONGO_DNSNAME/172.31.32.89/' /home/${APPUSER}/${COMPONENT}/systemd.service
+mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $?
 
 echo -n -e "\e[92m restarting the ${COMPONENT} file \e[0m"
