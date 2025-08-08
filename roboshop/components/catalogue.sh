@@ -45,7 +45,6 @@ echo -n -e "\e[34m Creating Application User Account \e[0m :"
 
 id ${APPUSER}  &>> ${LOGFILE}
 if [ $? -eq 0 ]; then
-
     echo "Application user is already Available"
     stat 0
 else
