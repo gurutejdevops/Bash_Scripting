@@ -3,7 +3,7 @@
 USER_ID="$(whoami)"
 COMPONENT=catalogue
 LOGFILE=/tmp/${COMPONENT}.log
-#APPUSER=roboshop
+APPUSER=roboshop
 
 
 if [ ${USER_ID} != root ]; then
@@ -60,11 +60,11 @@ id ${APPUSER}  &>> ${LOGFILE}
 if [ $? -eq 0 ]; then
 
     echo "Application user is already Available"
+    stat $?
 else
     useradd roboshop
+    stat $?
 fi
-
-stat $?
 
 
 
