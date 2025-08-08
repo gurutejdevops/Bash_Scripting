@@ -30,11 +30,12 @@ echo -e "\e[35m Configuration ${COMPONENT}...........! \e[0m"
 if [ -f /etc/yum.repos.d/nodesource*.repo ]; then
 
     echo "Repo already exists. Skipping installation." &>> ${LOGFILE}
-    stat $?
+    
 else
     yum install -y https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm &>> ${LOGFILE}
-    stat $?
+    
 fi
+stat $?
 
 echo -n -e "\e[37m Configuration ${COMPONENT} repo \e[0m"
 yum install nodejs -y  &>> ${LOGFILE}
