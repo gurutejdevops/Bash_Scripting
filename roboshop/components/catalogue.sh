@@ -3,6 +3,7 @@
 USER_ID="$(whoami)"
 COMPONENT=catalogue
 LOGFILE=/tmp/{COMPONENT}.log
+ID="$(id roboshop)"
 
 
 if [ ${USER_ID} != root ]; then
@@ -25,18 +26,27 @@ stat() {
 }
 
 
-echo "\e[35m Configuration ${COMPONENT}...........! \e[0m"
+echo -e "\e[35m Configuration ${COMPONENT}...........! \e[0m"
 
-echo -n "\e[36m Configuration ${COMPONENT} repo \e[0m"
+echo -n -e "\e[36m Configuration ${COMPONENT} repo \e[0m"
 yum install https://rpm.nodesource.com/pub_16.x/nodistro/repo/nodesource-release-nodistro-1.noarch.rpm -y  &>> ${LOGFILE}
 stat $?
 
-echo -n "\e[37m Configuration ${COMPONENT} repo \e[0m"
+echo -n -e "\e[37m Configuration ${COMPONENT} repo \e[0m"
 yum install nodejs -y  &>> ${LOGFILE}
 stat $?
 
-echo -n "\e[38m Creating Application User Account \e[0m"
-useradd roboshop
+echo -n -e "\e[38m Creating Application User Account \e[0m"
+
+id roboshop  &>> ${LOGFILE}
+
+if [ $? eq 0 ]; then
+
+    echo "roboshop user is available"
+else
+    useradd roboshop
+fi
+
 stat $?
 
 
