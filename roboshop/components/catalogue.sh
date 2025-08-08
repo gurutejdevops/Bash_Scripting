@@ -46,7 +46,7 @@ id ${APPUSER}  &>> ${LOGFILE}
 if [ $? -eq 0 ]; then
 
     echo "Application user is already Available"
-    stat $?
+    stat 0
 else
     useradd roboshop
     stat $?
