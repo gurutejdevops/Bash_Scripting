@@ -63,7 +63,7 @@ rm -rf ${COMPONENT} &>> ${LOGFILE}
 unzip -o /tmp/catalogue.zip &>> ${LOGFILE}
 stat $?
 
-echo -n -e "\e[41m Changing the ownership: \e[0m"
+echo -n -e "\e[33m Changing the ownership: \e[0m"
 mv ${COMPONENT}-main ${COMPONENT}
 chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
