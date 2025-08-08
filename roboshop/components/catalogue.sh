@@ -54,13 +54,13 @@ else
 fi
 
 echo -n -e "\e[35m Downloading the ${COMPONENT} \e[0m :"
-curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip"
 stat $?
 
 echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
-cd /home/roboshop
+cd /home/${APPUSER}
 rm -rf ${COMPONENT} &>> ${LOGFILE}
-unzip -o /tmp/catalogue.zip &>> ${LOGFILE}
+unzip -o /tmp/${COMPONENT}.zip &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[37m Changing the ownership: \e[0m"
@@ -73,7 +73,18 @@ cd /home/${APPUSER}/${COMPONENT}/
 npm install  &>> ${LOGFILE}
 stat $?
 
+echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
+sed -ie 's/MONGO_DNSNAME/172.31.32.89/' /home/${APPUSER}/${COMPONENT}/systemd.service
+mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 
+echo -n -e ""\e[92m restarting the ${COMPONENT} file \e[0m"
+systemctl daemon-reload  &>> ${LOGFILE}
+systemctl start ${COMPONENT}  &>> ${LOGFILE}
+systemctl enable ${COMPONENT}  &>> ${LOGFILE}
+systemctl status ${COMPONENT} -l  &>> ${LOGFILE}
+stat $?
+
+echo -n -e ""\e[93m Installation ${COMPONENT} completed \e[0m"
 
 
 
