@@ -40,7 +40,7 @@ echo -n -e "\e[38m Creating Application User Account \e[0m"
 
 id roboshop  &>> ${LOGFILE}
 
-if [ $? eq 0 ]; then
+if [ $? -eq 0 ]; then
 
     echo "roboshop user is available"
 else
