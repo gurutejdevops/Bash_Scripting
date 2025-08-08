@@ -53,6 +53,22 @@ else
     stat $?
 fi
 
+echo -n -e "\e[39m Downloading the ${COMPONENT} \e[0m:"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
+stat $?
+
+echo -n -e "\e[40m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m:"
+cd /home/roboshop
+rm -rf ${COMPONENT} &>> ${LOGFILE}
+unzip -o /tmp/catalogue.zip &>> ${LOGFILE}
+stat $?
+
+echo -n -e "\e[41m Changing the ownership: \e[0m"
+mv ${COMPONENT}-main ${COMPONENT}
+chown -R ${COMPONENT}:${COMPONENT} /home/${APPUSER}/${COMPONENT}/
+stat $?
+
+
 
 
 
