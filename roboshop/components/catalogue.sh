@@ -60,6 +60,7 @@ stat $?
 echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
 cd /home/${APPUSER}
 ls -ltr
+echo "rm -rf executing"
 rm -rf ${COMPONENT} &>> ${LOGFILE}
 ls -ltr
 unzip -o /tmp/${COMPONENT}.zip &>> ${LOGFILE}
