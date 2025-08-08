@@ -59,8 +59,11 @@ stat $?
 
 echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
 cd /home/${APPUSER}
+ls -ltr
 rm -rf ${COMPONENT} &>> ${LOGFILE}
+ls -ltr
 unzip -o /tmp/${COMPONENT}.zip &>> ${LOGFILE}
+ls -ltr
 stat $?
 
 echo -n -e "\e[37m Changing the ownership: \e[0m"
@@ -74,7 +77,7 @@ npm install  &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
-sed -ie 's/MONGO_DNSNAME/guru/' /home/${APPUSER}/${COMPONENT}/systemd.service
+sed -ie 's/MONGO_DNSNAME/172.31.32.89/' /home/${APPUSER}/${COMPONENT}/systemd.service
 mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
 stat $?
 
