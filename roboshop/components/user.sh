@@ -55,7 +55,7 @@ stat $?
 
 echo -n -e "\e[36m Changing the ownership \e[0m :"
 mv user-main ${COMPONENT}
-chown -R ${COMPONENT}:${COMPONENT} /home/${APPUSER}/${COMPONENT}/
+chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
 
 echo -n -e "\e[90m Generating Artifacts \e[0m"
