@@ -39,13 +39,12 @@ stat $?
 echo -e "\e[32m Creation of Application user \e[0m "
 
 id ${APPUSER}  &>> ${LOGFILE}
-if [ $? -ne 0 ]; then
+if [ $? -ne 0 ] ; then
     echo "Application user created now"
     useradd roboshop
-else
-    echo "Application user is already available"
+    stat $?
 fi
-stat $?
+
 
 echo -n -e "\e[35m Downloading the ${COMPONENT} \e[0m :"
 curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip" &>> ${LOGFILE}
