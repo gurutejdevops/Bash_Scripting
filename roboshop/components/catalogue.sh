@@ -25,7 +25,7 @@ stat() {
 }
 
 
-echo -e "\e[35m Configuration ${COMPONENT}...........! \e[0m "
+echo -e "\e[32m Configuration ${COMPONENT}...........! \e[0m "
 
 if [ -f /etc/yum.repos.d/nodesource*.repo ]; then
 
@@ -37,11 +37,11 @@ else
 fi
 stat $?
 
-echo -n -e "\e[37m Configuration ${COMPONENT} repo \e[0m "
+echo -n -e "\e[33m Configuration ${COMPONENT} repo \e[0m "
 yum install nodejs -y  &>> ${LOGFILE}
 stat $?
 
-echo -n -e "\e[38m Creating Application User Account \e[0m : \n"
+echo -n -e "\e[34m Creating Application User Account \e[0m :"
 
 id ${APPUSER}  &>> ${LOGFILE}
 if [ $? -eq 0 ]; then
@@ -53,17 +53,17 @@ else
     stat $?
 fi
 
-echo -n -e "\e[39m Downloading the ${COMPONENT} \e[0m :"
+echo -n -e "\e[35m Downloading the ${COMPONENT} \e[0m :"
 curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/catalogue/archive/main.zip"
 stat $?
 
-echo -n -e "\e[40m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
+echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
 cd /home/roboshop
 rm -rf ${COMPONENT} &>> ${LOGFILE}
 unzip -o /tmp/catalogue.zip &>> ${LOGFILE}
 stat $?
 
-echo -n -e "\e[33m Changing the ownership: \e[0m"
+echo -n -e "\e[37m Changing the ownership: \e[0m"
 mv ${COMPONENT}-main ${COMPONENT}
 chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
