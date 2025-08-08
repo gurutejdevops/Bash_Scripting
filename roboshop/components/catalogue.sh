@@ -2,7 +2,7 @@
 
 USER_ID="$(whoami)"
 COMPONENT=catalogue
-LOGFILE=/tmp/{COMPONENT}.log
+LOGFILE=/tmp/${COMPONENT}.log
 
 
 if [ ${USER_ID} != root ]; then
