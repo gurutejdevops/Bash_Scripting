@@ -36,7 +36,7 @@ echo -n -e "\e[37m Configuration ${COMPONENT} repo \e[0m"
 yum install nodejs -y  &>> ${LOGFILE}
 stat $?
 
-echo -n -e "\e[38m Creating Application User Account \e[0m"
+echo -n -e "\e[38m Creating Application User Account \e[0m \n:"
 
 id roboshop  &>> ${LOGFILE}
 
