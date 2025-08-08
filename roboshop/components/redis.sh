@@ -25,10 +25,8 @@ stat() {
 }
 
 echo -e -n "\e[33m Configuring ${COMPONENT} repo \e[0m"
-curl -L https://raw.githubusercontent.com/stans-robot-project/${COMPONENT}/main/redis.repo -o /etc/yum.${COMPONENT}.d/${COMPONENT}.repo &>> ${LOGFILE}
+curl -L https://raw.githubusercontent.com/stans-robot-project/${COMPONENT}/main/redis.repo -o /etc/yum.repos.d/${COMPONENT}.repo &>> ${LOGFILE}
 stat $?
-
-<<COMMENT
 
 echo -e -n "\e[33m Installing ${COMPONENT} repo \e[0m"
 yum install redis-6.2.13 -y &>> ${LOGFILE}
@@ -44,4 +42,3 @@ systemctl start ${COMPONENT}       &>> ${LOGFILE}
 systemctl status ${COMPONENT} -l   &>> ${LOGFILE}
 
 echo -e -n "\e[33m ${COMPONENT} installation is completed \e[0m"
-COMMENT
