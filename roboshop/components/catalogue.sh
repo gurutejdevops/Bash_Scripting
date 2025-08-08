@@ -90,7 +90,7 @@ systemctl start ${COMPONENT}  &>> ${LOGFILE}
 systemctl enable ${COMPONENT}  &>> ${LOGFILE}
 stat $?
 
-echo -n -e ""\e[93m Installation ${COMPONENT} completed \e[0m"
+echo -n -e "\e[93m Installation ${COMPONENT} completed \e[0m"
 
 
 
