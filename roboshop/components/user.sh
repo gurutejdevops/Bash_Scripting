@@ -39,11 +39,11 @@ stat $?
 echo -e "\e[32m Creation of Application user \e[0m "
 
 id ${APPUSER}  &>> ${LOGFILE}
-if [ $? -eq 0 ]; then
-    echo "Application user is already available"
-else
+if [ $? -ne 0 ]; then
     echo "Application user created now"
     useradd roboshop
+else
+    echo "Application user is already available"
 fi
 stat $?
 
