@@ -14,7 +14,7 @@ case $A in
     stop)
         echo "ur ubuntu user"
         ;;
-    restart)
+    *)
         echo "new user"
         ;;
 esac
