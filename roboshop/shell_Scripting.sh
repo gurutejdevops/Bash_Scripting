@@ -4,7 +4,7 @@
 # Date Created:
 # Version: 
 # Date Modified:
-case $UID in
+case $NUM in
     0)
         echo "ur  root user"
         ;;
