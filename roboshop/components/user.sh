@@ -20,7 +20,7 @@ stat() {
     fi
 }
 
-echo -e "\e[32m Configuration ${COMPONENT}...........! \e[0m "
+echo -e -n "\e[32m Configuration ${COMPONENT}...........! \e[0m "
 if [ -f /etc/yum.repos.d/nodesource*.repo ]; then
 
     echo "Repo already exists. Skipping installation."
@@ -29,11 +29,11 @@ else
 fi
 stat $?
 
-echo -e "\e[32m Installation of NodeJs...........! \e[0m "
+echo -e -n "\e[32m Installation of NodeJs...........! \e[0m "
 yum install nodejs -y &>> ${LOGFILE}
 stat $?
 
-echo -e "\e[32m Creation of Application user \e[0m "
+echo -e  "\e[32m Creation of Application user \e[0m "
 
 id ${APPUSER}  &>> ${LOGFILE}
 
@@ -42,6 +42,7 @@ if [ $? -ne 0 ] ; then
     echo "user created"
     stat $?
 fi
+
 
 echo -n -e "\e[35m Downloading the ${COMPONENT} \e[0m :"
 curl -s -L -o /tmp/user.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip" &>> ${LOGFILE}
