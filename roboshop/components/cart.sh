@@ -1,5 +1,7 @@
 #!/bin/bash
 
+set -e
+
 COMPONENT=cart
 LOGFILE=/tmp/{COMPONENT}.log
 APPUSER=roboshop
