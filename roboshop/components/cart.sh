@@ -57,7 +57,7 @@ stat $?
 echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
 cd /home/${APPUSER}
 rm -rf ${COMPONENT} &>> ${LOGFILE}
-unzip -o /tmp/${APPUSER}.zip &>> ${LOGFILE}
+unzip -o /tmp/${COMPONENT}.zip &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[36m Changing the ownership \e[0m :"
