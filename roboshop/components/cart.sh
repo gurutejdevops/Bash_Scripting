@@ -48,6 +48,6 @@ else
     stat $?
 fi
 
-$?
+stat $?
 
 
