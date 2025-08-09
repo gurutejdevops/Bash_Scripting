@@ -4,4 +4,11 @@
 # Date Created:
 # Version: 
 # Date Modified:
-echo "Hello Guru"
+set -x
+df -h
+free -h
+pwd
+set +x
+uname
+whoami
+ls -l
