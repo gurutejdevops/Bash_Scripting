@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -e
-
 #Validate the user
 USER_ID="$(whoami)"
 COMPONENT=mongodb
