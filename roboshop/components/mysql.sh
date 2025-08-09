@@ -86,9 +86,13 @@ DEFAULT_ROOT_PASSWORD=$(sudo grep 'temporary password' /var/log/mysqld.log | cut
 echo "The Default password is: ${DEFAULT_ROOT_PASSWORD}"
 stat $?
 
-echo -n "Default ${COMPONENT} password reset:"
-echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1'" | mysql --connect-expired-password -uroot -p${DEFAULT_ROOT_PASSWORD} &>> ${LOGFILE}
-stat $?
+echo "show databases;" | mysql -uroot -pRoboShop@1 &>> ${LOGFILE}
+
+if [ $? -ne 0]; then
+    echo -n "Default ${COMPONENT} password reset:"
+    echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1'" | mysql --connect-expired-password -uroot -p${DEFAULT_ROOT_PASSWORD} &>> ${LOGFILE}
+    stat $?
+fi
 
 
 
