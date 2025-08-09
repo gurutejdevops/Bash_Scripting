@@ -6,7 +6,9 @@
 # Date Modified:
 read -p "Hello there, please enter your name: " name
 read -sp "Please enter your age: "  age
+echo $age
 read -p "Course Interested: " course
 read -p "Qualification: "  qual
 read -p "Years of experience: " experience
 read -sp "Mobile for communication: " mobile
+echo ${mobile}
