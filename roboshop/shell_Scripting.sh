@@ -5,16 +5,16 @@
 # Version: 
 # Date Modified:
 
-A=$1
+A="${id -u)"
 
 case $A in
-    start)
+    0)
         echo "ur  root user"
         ;;
-    stop)
-        echo "ur ubuntu user"
+    1000)
+        echo "ur centos user"
         ;;
     *)
-        echo "new user"
+        echo "normal user"
         ;;
 esac
