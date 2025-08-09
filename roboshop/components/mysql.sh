@@ -14,7 +14,7 @@ stat() {
     if [ $1 -eq 0 ]; then
          echo -e "\e[32m success \e[0m"
     else
-         echo -e "\e[31m success \e[0m"
+         echo -e "\e[31m Failure \e[0m"
          exit 2
     fi
 }
