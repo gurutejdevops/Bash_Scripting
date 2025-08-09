@@ -5,7 +5,7 @@
 # Version: 
 # Date Modified:
 
-A="${id -u}"
+A=${id -u}
 
 case $A in
     0)
