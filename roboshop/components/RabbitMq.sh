@@ -1,7 +1,7 @@
 #!/bin/bash
 
 USER_ID="$(whoami)"
-COMPONENT=mongodb
+COMPONENT=rabbitmq
 LOGFILE=/tmp/${COMPONENT}.log
 
 if [ ${USER_ID} != root ] ; then
@@ -36,9 +36,9 @@ yum install rabbitmq-server -y  &>> ${LOGFILE}
 stat $?
 
 echo -n "Start RabbitMQ:"
-systemctl enable rabbitmq-server 
-systemctl start rabbitmq-server
-systemctl status rabbitmq-server -l
+systemctl enable ${COMPONENT}-server   &>> ${LOGFILE}
+systemctl start ${COMPONENT}-server    &>> ${LOGFILE}
+systemctl status ${COMPONENT}-server -l   &>> ${LOGFILE}
 stat $?
 
 echo -n "Create Application User:"
