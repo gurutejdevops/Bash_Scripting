@@ -4,17 +4,11 @@
 # Date Created:
 # Version: 
 # Date Modified:
-
-A="$(id -u)"
-
-case ${A} in
-    0)
-        echo "ur  root user"
-        ;;
+case $UID in 
+	0) 
+		echo "You are root user";;
     1000)
-        echo "ur centos user"
-        ;;
-    *)
-        echo "normal user"
-        ;;
+		echo "You are ubuntu user";;
+	*)
+		echo "Are you a new user??";;
 esac
