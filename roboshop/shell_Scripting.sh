@@ -4,9 +4,7 @@
 # Date Created:
 # Version: 
 # Date Modified:
-echo "Hello enter the name:"
-read name
+read -p "enter name": name
 echo "${name} welcome to linux classes"
-echo "Please enter the course you're willing to learn" 
-read course
+read -p "enter the course name:" course
 echo "you're interested in ${course}"
