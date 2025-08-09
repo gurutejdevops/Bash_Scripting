@@ -102,4 +102,15 @@ if [ $? -eq 0 ]; then
     stat $?
 fi
 
+echo "Download and extract the ${COMPONENT} schema:"
+curl -s -L -o /tmp/mysql.zip "https://github.com/stans-robot-project/mysql/archive/main.zip" &>> ${LOGFILE}
+cd /tmp
+unzip -o ${COMPONENT}.zip &>> ${LOGFILE}
+stat $?
+
+echo "Injecting the ${COMPONENT} schema:"
+cd /tmp/${COMPONENT}-main
+mysql -u root -pRoboShop@1 <shipping.sql &>> ${LOGFILE}
+stat $?
+
 
