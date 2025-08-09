@@ -9,3 +9,6 @@ num2=300
 #method1
 let sum=num1+num2
 echo "The sum of ${num1} and ${num2} is ${sum}"
+#method2
+diff=$(( num1 - num2 ))
+echo "The diff of ${num1} and ${num2} is ${diff}"
