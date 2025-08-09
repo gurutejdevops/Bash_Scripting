@@ -4,6 +4,9 @@
 # Date Created:
 # Version: 
 # Date Modified:
+
+A=$1
+
 case $A in
     start)
         echo "ur  root user"
