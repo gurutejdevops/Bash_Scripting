@@ -5,7 +5,7 @@ LOGFILE=/tmp/{COMPONENT}.log
 APPUSER=roboshop
 USER_ID="$(id -u)"
 
-if [ ${USER_ID} != root ]; then
+if [ ${USER_ID} -ne 0 ]; then
     echo -e "\e[31m script is expected to execute by the root user or with a sudo privilege \e[0m 
     \n \t Example: \n\t sudo wrapper.sh ${COMPONENT}.sh"
     exit 1
