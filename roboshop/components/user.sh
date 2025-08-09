@@ -55,7 +55,7 @@ unzip -o /tmp/user.zip &>> ${LOGFILE}
 stat $?
 
 echo -n -e "\e[36m Changing the ownership \e[0m :"
-mv user-main ${COMPONENT}
+mv ${APPUSER}-main ${COMPONENT}
 chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
 stat $?
 

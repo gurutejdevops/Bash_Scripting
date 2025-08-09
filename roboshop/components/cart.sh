@@ -50,4 +50,39 @@ fi
 
 stat $?
 
+echo -n -e "\e[35m Downloading the ${COMPONENT} \e[0m :"
+curl -s -L -o /tmp/${COMPONENT}.zip "https://github.com/stans-robot-project/${COMPONENT}/archive/main.zip" &>> ${LOGFILE}
+stat $?
+
+echo -n -e "\e[36m Copying the ${COMPONENT} to ${APPUSER} home directory \e[0m :"
+cd /home/${APPUSER}
+rm -rf ${COMPONENT} &>> ${LOGFILE}
+unzip -o /tmp/${APPUSER}.zip &>> ${LOGFILE}
+stat $?
+
+echo -n -e "\e[36m Changing the ownership \e[0m :"
+mv ${COMPONENT}-main ${COMPONENT}
+chown -R ${APPUSER}:${APPUSER} /home/${APPUSER}/${COMPONENT}/
+stat $?
+
+echo -n -e "\e[90m Generating Artifacts \e[0m"
+cd /home/${APPUSER}/${COMPONENT}/  
+npm install  &>> ${LOGFILE}
+stat $?
+
+echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
+sed -ie 's/REDIS_ENDPOINT/172.31.39.200/'  /home/${APPUSER}/${COMPONENT}/systemd.service
+sed -ie 's/CATALOGUE_ENDPOINT/172.31.47.227/'  /home/${APPUSER}/${COMPONENT}/systemd.service 
+mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT}.service
+stat $?
+
+echo -n -e "\e[92m restarting the ${COMPONENT} file \e[0m"
+systemctl daemon-reload  &>> ${LOGFILE}
+systemctl restart ${COMPONENT}    &>> ${LOGFILE}
+systemctl start ${COMPONENT}      &>> ${LOGFILE}
+systemctl enable ${COMPONENT}    &>> ${LOGFILE}
+stat $?
+
+echo -n -e "\e[93m Installation ${COMPONENT} completed \e[0m"
+
 
