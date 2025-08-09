@@ -28,11 +28,6 @@ stat $?
 echo -e -n "\e[32m Installing ${COMPONENT}...........! \e[0m "
 yum install mysql-community-server -y  &>> ${LOGFILE}
 stat $?
-COMMENT
-
-
-#!/bin/bash
-set -e
 
 echo "🔹 Checking and fixing CentOS 7 repo..."
 if grep -q "vault.centos.org" /etc/yum.repos.d/CentOS-Base.repo; then
@@ -76,12 +71,24 @@ sudo systemctl enable mysqld  &>> ${LOGFILE}
 sudo systemctl start mysqld   &>> ${LOGFILE}
 
 
-<<COMMENT
+
 # Show temporary password if first installation
 if [ -f /var/log/mysqld.log ] && grep -q "temporary password" /var/log/mysqld.log; then
     TEMP_PASS=$(grep "temporary password" /var/log/mysqld.log | awk '{print $NF}' | tail -n 1)
     echo "MySQL temporary root password: $TEMP_PASS"
 fi
-COMMENT
 
 echo "mySQL 5.7 installation process completed!"
+COMMENT
+
+echo -n "Extracting the Default ${COMPONENT} password:"
+DEFAULT_ROOT_PASSWORD=$(sudo grep 'temporary password' /var/log/mysqld.log | cut -d ' ' -f11)
+echo "The Default password is: ${DEFAULT_ROOT_PASSWORD}"
+stat $?
+
+echo -n "Default ${COMPONENT} password reset:"
+echo "ALTER USER 'root'@'localhost' IDENTIFIED BY 'RoboShop@1'" | mysql --connect-expired-password -uroot -p${DEFAULT_ROOT_PASSWORD} &>> ${LOGFILE}
+stat $?
+
+
+
