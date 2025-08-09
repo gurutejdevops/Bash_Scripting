@@ -42,7 +42,7 @@ systemctl status ${COMPONENT}-server -l   &>> ${LOGFILE}
 stat $?
 
 echo -n "Create Application User:"
-rabbitmqctl add_user ${APPUSER} roboshop123
-rabbitmqctl set_user_tags ${APPUSER} administrator
+rabbitmqctl add_user roboshop roboshop123
+rabbitmqctl set_user_tags roboshop administrator
 rabbitmqctl set_permissions -p / ${APPUSER} ".*" ".*" ".*"
 stat $?
