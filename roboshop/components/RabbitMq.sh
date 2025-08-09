@@ -41,8 +41,16 @@ systemctl start ${COMPONENT}-server    &>> ${LOGFILE}
 systemctl status ${COMPONENT}-server -l   &>> ${LOGFILE}
 stat $?
 
-echo -n "Create Application User:"
-rabbitmqctl add_user roboshop roboshop123
-rabbitmqctl set_user_tags roboshop administrator
-rabbitmqctl set_permissions -p / ${APPUSER} ".*" ".*" ".*"
+sudo rabbitmqctl list_users | grep roboshop &>> ${LOGFILE}
+if [ $? -ne 0 ] ; then 
+    echo -n "Creating ${COMPOMENT} user account :"
+    rabbitmqctl add_user roboshop roboshop123 &>> ${LOGFILE}
+    stat $? 
+fi 
+
+echo -n "Configuring the permissions :"
+rabbitmqctl set_user_tags roboshop administrator     &>> ${LOGFILE}
+rabbitmqctl set_permissions -p / roboshop ".*" ".*" ".*"     &>> ${LOGFILE}
 stat $?
+
+echo -e "\e[35m ${COMPONENT} Installation Is Completed \e[0m \n"
