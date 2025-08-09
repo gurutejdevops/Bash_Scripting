@@ -22,7 +22,7 @@ stat() {
 
 }
 
-
+<<COMMENT
 echo -n "Erlang is a dependency that is needed for RabbitMQ:"
 curl -s https://packagecloud.io/install/repositories/rabbitmq/erlang/script.rpm.sh | sudo bash   &>> ${LOGFILE}
 stat $?
@@ -40,6 +40,7 @@ systemctl enable ${COMPONENT}-server   &>> ${LOGFILE}
 systemctl start ${COMPONENT}-server    &>> ${LOGFILE}
 systemctl status ${COMPONENT}-server -l   &>> ${LOGFILE}
 stat $?
+COMMENT
 
 sudo rabbitmqctl list_users | grep roboshop &>> ${LOGFILE}
 if [ $? -ne 0 ] ; then 
