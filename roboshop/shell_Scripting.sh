@@ -4,10 +4,9 @@
 # Date Created:
 # Version: 
 # Date Modified:
-num1=200
-num2=300
-if [ ${num1} -gt ${num2} ]; then
-    echo "${num1} is greater than ${num2}"
-else
-    echo "${num1} is less than ${num2}"
-fi
+read -p "Hello there, please enter your name: " name
+read -sp "Please enter your age: "  age
+read -p "Course Interested: " course
+read -p "Qualification: "  qual
+read -p "Years of experience: " experience
+read -sp "Mobile for communication: " mobile
