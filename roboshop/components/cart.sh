@@ -3,7 +3,7 @@
 set -e
 
 COMPONENT=cart
-LOGFILE=/tmp/{COMPONENT}.log
+LOGFILE=/tmp/${COMPONENT}.log
 APPUSER=roboshop
 USER_ID="$(id -u)"
 
