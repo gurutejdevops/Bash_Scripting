@@ -4,7 +4,8 @@
 # Date Created:
 # Version: 
 # Date Modified:
-read -p "enter name": name
-echo "${name} welcome to linux classes"
-read -p "enter the course name:" course
-echo "you're interested in ${course}"
+num1=200
+num2=300
+#method1
+let sum=num1+num2
+echo "The sum of ${num1} and ${num2} is ${sum}"
