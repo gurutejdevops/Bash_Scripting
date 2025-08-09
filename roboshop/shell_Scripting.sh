@@ -5,9 +5,9 @@
 # Version: 
 # Date Modified:
 
-A=${id -u}
+A="${id -u}"
 
-case $A in
+case ${A} in
     0)
         echo "ur  root user"
         ;;
