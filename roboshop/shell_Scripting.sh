@@ -6,14 +6,8 @@
 # Date Modified:
 num1=200
 num2=300
-#method1
-let sum=num1+num2
-echo "The sum of ${num1} and ${num2} is ${sum}"
-#method2
-diff=$[ num1 - num2 ]
-echo "The diff of ${num1} and ${num2} is ${diff}"
-#method3
-product=$((num1 * num2))
-echo "The product of ${num1} and ${num2} is ${product}"
-result=$(expr $num1 / $num2)
-echo "The product of ${num1} and ${num2} is ${result}"
+if [ num1 -gt num2 ]; then
+    echo "${num1} is greater than ${num2}"
+else
+    echo "${num1} is less than ${num2}"
+fi
