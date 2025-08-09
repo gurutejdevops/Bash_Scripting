@@ -4,14 +4,16 @@
 # Date Created:
 # Version: 
 # Date Modified:
-case $1 in
-    1)
-        echo "welcome Linux sesions";;
-    2)
-        sudo yum update;;
-    3)
-        sudo yum install nginx -y;;
-    *)
-        echo "Please enter a correct value"
-		echo "./script12.sh 1/2/3/4 (1: greet | 2: update apt |3: install java | 4: install tree)";;
-esac
+echo "Hello there, Welcome to \"Deloitte Consulting Inc\" "
+read -p "enter name:" name
+read -p "enter username:" usrname
+read -p "enter desg:" desg
+read -p "enter shelltype:" shelltype
+
+sudo useradd -s $shelltype -c $desg -m -d /home/$usrname $name
+
+if [ $? -eq 0 ]; then
+    echo "User created successfully"
+else
+    echo "Check with Admin"
+fi
