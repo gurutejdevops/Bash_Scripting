@@ -47,5 +47,6 @@ else
     echo "user created"
     stat $?
 fi
+$?
 
 
