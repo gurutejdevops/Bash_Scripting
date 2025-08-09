@@ -4,14 +4,14 @@
 # Date Created:
 # Version: 
 # Date Modified:
-case $NUM in
-    0)
+case $A in
+    start)
         echo "ur  root user"
         ;;
-    1000)
+    stop)
         echo "ur ubuntu user"
         ;;
-    *)
+    restart)
         echo "new user"
         ;;
 esac
