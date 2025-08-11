@@ -11,6 +11,7 @@ COMPONENT=$1
 if [ -z $1 ]; then
     echo -e "\e[31m The component name is needed\e[0m"
     echo -e "\e[32m Example $ bash shell_Scripting post\e[0m"
+    exit 1
 fi 
 
 AMI_ID=ami-0ad3d11156336bf7f
