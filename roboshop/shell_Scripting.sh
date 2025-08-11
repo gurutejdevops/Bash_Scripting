@@ -24,7 +24,7 @@ PRIVATE_IP=$(aws ec2 run-instances \
     --instance-type ${Instance_tpe} \
     --key-name ${Key_Name} \
     --security-group-ids ${security_group} \
-    --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=New_Linux_Server}]' | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
+    --tag-specifications 'ResourceType=instance,Tags=[{Key=Name,Value=${COMPONENT}}]' | jq '.Instances[].PrivateIpAddress' | sed -e 's/"//g')
 
 echo "The private IP of $COMPONENT is ${PRIVATE_IP}"
 
