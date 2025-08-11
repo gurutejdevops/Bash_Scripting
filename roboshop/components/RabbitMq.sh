@@ -43,6 +43,7 @@ stat $?
 COMMENT
 
 sudo rabbitmqctl list_users | grep roboshop &>> ${LOGFILE}
+
 if [ $? -ne 0 ] ; then 
     echo -n "Creating ${COMPOMENT} user account :"
     rabbitmqctl add_user roboshop roboshop123 &>> ${LOGFILE}

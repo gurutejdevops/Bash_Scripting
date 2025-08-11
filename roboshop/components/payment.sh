@@ -21,7 +21,7 @@ stat() {
 }
 
 echo -n "Install Python 3:"
-yum install python36 gcc python3-devel -y
+yum install python36 gcc python3-devel -y &>> ${LOGFILE}
 stat $?
 
 echo -e -n "\e[32m Creation of Application user \e[0m "
@@ -68,8 +68,8 @@ mv /home/${APPUSER}/${COMPONENT}/systemd.service /etc/systemd/system/${COMPONENT
 stat $?
 
 echo -n -e "\e[91m Configuring the ${COMPONENT} file \e[0m"
-systemctl daemon-reload
-systemctl enable payment 
-systemctl start payment
-systemctl status payment -l
+systemctl daemon-reload  &>> ${LOGFILE}
+systemctl enable payment   &>> ${LOGFILE}
+systemctl start payment   &>> ${LOGFILE}
+systemctl status payment -l  &>> ${LOGFILE}
 stat $?
