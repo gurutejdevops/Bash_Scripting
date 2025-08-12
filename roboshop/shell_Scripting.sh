@@ -1,17 +1,13 @@
 #!/bin/bash
 
-ACTION=$1
-
-if [ "${ACTION}" == "start" ]; then
-
-    echo -e "\e[31m Payment Services started \e[0m"
-
-elif [ "${ACTION}" == "stop" ]; then
-
-    echo -e "\e[31m Payment Services stopped \e[0m"
-
-else
-
-    echo -e "\e[32m Please select start or stop services \e[0m"
-
-fi
+case $UID in
+    0)
+        echo "you are root user"
+        ;;
+    100)
+        echo "You are ubuntu user"
+        ;;
+    *)
+        echo "you are normal user"
+        ;;
+esac
