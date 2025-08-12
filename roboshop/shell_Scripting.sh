@@ -4,7 +4,7 @@ ACTION=$1
 
 case ${ACTION} in
     start)
-        echo "\e[31m Payment Services started \e[0m"
+        echo -e "\e[31m Payment Services started \e[0m"
         ;;
     stop)
         echo -e "\e[32m Payment services stopped \e[0m"
