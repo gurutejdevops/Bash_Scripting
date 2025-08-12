@@ -4,7 +4,7 @@ case $UID in
     0)
         echo "you are root user"
         ;;
-    100)
+    1000)
         echo "You are ubuntu user"
         ;;
     *)
