@@ -47,9 +47,9 @@ else
     echo "Better luck next time"
 fi
 
-VAR=$(cat ~/passwd)
+VAR="$(cat ~/passwd)"
 
-if [ -n $VAR ]; then
+if [ -n "$VAR" ]; then
     echo "YES CONTENT IS THERE IN THE FILE"
 else
     echo "no content"
@@ -60,3 +60,7 @@ if [ -f ~/passwd ]; then
 else
     echo "not there passwd file"
 fi
+
+for i in 10 20 30 40; do
+    echo "The value of ${i}"
+done
