@@ -83,5 +83,5 @@ prod=$((num1 * num2))
 result=$(expr $num1 / $num2)
 COMMENT
 
-read -s -p "enter the age:"
-echo "The age is:"
+read -s -p "enter the age:" age
+echo "The age is: ${age}"
