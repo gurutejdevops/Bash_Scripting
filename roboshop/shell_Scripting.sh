@@ -75,3 +75,13 @@ num2=20
 
 diff=$((num1 - num2 ))
 echo "The diff is ${diff}"
+
+<<COMMENT
+let sum=num1+num2
+diff=$[ num1 - num2 ]
+prod=$((num1 * num2))
+result=$(expr $num1 / $num2)
+COMMENT
+
+read -s -p "enter the age:"
+echo "The age is:"
