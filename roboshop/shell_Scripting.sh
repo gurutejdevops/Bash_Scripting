@@ -47,6 +47,7 @@ else
     echo "Better luck next time"
 fi
 
+VAR="$(cat ~/passwd)"
 
 if [ -n $VAR ]; then
     echo "YES CONTENT IS THERE IN THE FILE"
