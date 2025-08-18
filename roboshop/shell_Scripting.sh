@@ -69,3 +69,9 @@ for((i=1;i<=11;i++))
 do
     echo "The value of ${i}"
 done
+
+num1=10
+num2=20
+
+diff=$num1-$num2
+echo "The diff is ${diff}"
