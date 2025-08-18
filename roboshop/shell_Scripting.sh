@@ -1,13 +1,7 @@
 #!/bin/bash
 
-case $UID in
-    0)
-        echo "you are root user"
-        ;;
-    1000)
-        echo "You are ubuntu user"
-        ;;
-    *)
-        echo "you are normal user"
-        ;;
-esac
+#commands to execute scripts
+#bash <scriptname.sh>
+#sh <scriptname.sh>
+#./<scriptname.sh>
+echo "\e[32m "Welcome to Script learning\e[0m"
