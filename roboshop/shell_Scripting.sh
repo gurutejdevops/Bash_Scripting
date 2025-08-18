@@ -26,3 +26,15 @@ echo "The value of a is ${a}"
 echo "The value of b is ${b}"
 echo "The value of b is ${x}"
 echo -e "\e[32m Welcome to \nScript learning \e[0m"
+
+case $3 in 
+    start)
+        echo "payment service started"
+        ;;
+    stop)
+        echo "payment services stopped"
+        ;;
+    *)
+        echo "Please select start or stop"
+        ;;
+esac
