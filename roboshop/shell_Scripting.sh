@@ -49,7 +49,7 @@ fi
 
 VAR=$(~/passwd)
 
-if [ -n $VAR ]; the
+if [ -n $VAR ]; then
     echo "YES CONTENT IS THERE IN THE FILE"
 else
     echo "no content"
