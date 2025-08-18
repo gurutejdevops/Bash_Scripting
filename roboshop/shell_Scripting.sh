@@ -46,3 +46,17 @@ elif [ $4 -ne 4 ]; then
 else
     echo "Better luck next time"
 fi
+
+VAR=~/passwd
+
+if [ -n $VAR ]; the
+    echo "YES CONTENT IS THERE IN THE FILE"
+else
+    echo "no content"
+fi
+
+if [ -f ~/passwd ]; then
+    echo "passwd file is avilable"
+else
+    echo "not there passwd file"
+fi
