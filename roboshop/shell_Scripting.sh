@@ -5,4 +5,4 @@
 #sh <scriptname.sh>
 #./<scriptname.sh>
 
-echo -e "\e[32m Welcome to \nScript learning \e[0m"
+echo -e "\e[43;32m Welcome to \nScript learning \e[0m"
