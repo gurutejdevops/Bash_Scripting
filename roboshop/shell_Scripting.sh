@@ -7,9 +7,9 @@
 
 a=10
 b=10
-date="${date +%D}"
-dir="${pwd}"
-session_count="${who | wc -l}"
+date="$(date +%D)"
+dir="$(pwd)"
+session_count="$(who | wc -l)"
 
 echo "The date is ${date}"
 echo "The current dir is ${dir}"
