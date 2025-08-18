@@ -38,3 +38,11 @@ case $3 in
         echo "Please select start or stop"
         ;;
 esac
+
+if [ $4 -eq 4 ]; then
+    echo "Yes"
+elif [ $4 -ne 4 ]; then
+    echo "NO"
+else
+    echo "Better luck next time"
+fi
