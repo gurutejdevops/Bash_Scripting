@@ -47,7 +47,7 @@ else
     echo "Better luck next time"
 fi
 
-VAR=wrapper.sh
+VAR=one.txt
 
 if [ -n $VAR ]; then
     echo "YES CONTENT IS THERE IN THE FILE"
