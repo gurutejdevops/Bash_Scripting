@@ -4,4 +4,5 @@
 #bash <scriptname.sh>
 #sh <scriptname.sh>
 #./<scriptname.sh>
-echo -e "\e[32m "Welcome to Script learning \e[0m"
+
+echo -e "\e[32m Welcome to Script learning \e[0m"
