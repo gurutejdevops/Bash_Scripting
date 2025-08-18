@@ -64,3 +64,8 @@ fi
 for i in 10 20 30 40; do
     echo "The value of ${i}"
 done
+
+for((i=1;i<=11;i++))
+do
+    echo "The value of ${i}"
+done
