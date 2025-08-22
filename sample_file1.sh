@@ -12,7 +12,7 @@ stat()
     fi
 }
 
-echo -n -e "Root access checking:" \n
+echo -n -e "Root access checking: \n" 
 
 if [ ${USER_ID} != root ]; then
 
