@@ -18,3 +18,7 @@ for var in 10 20 30 40 50; do
 echo "The value of $var"
 done
 
+for((i=1;i<=20;i++))
+do
+echo "\e[32m The value of ${i} \e[0m"
+done
