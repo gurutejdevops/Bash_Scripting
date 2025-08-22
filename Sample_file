@@ -2,10 +2,11 @@
 
 #shebang Notation
 date="$(date +%d)"
-session_count="$(who | )
+session_count="$(who | wc -l)"
 
 echo "Welcome To Bash Scripting"
 echo -e "\e[32m the date is ${date} \e[0m"
+echo -e "\e[32m the date is ${session_count} \e[0m"
 
 echo -e "\e[32m Line1 \e[0m"
 echo "Line2"
