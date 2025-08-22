@@ -20,5 +20,5 @@ done
 
 for((i=1;i<=20;i++))
 do
-echo "\e[32m The value of ${i} \e[0m"
+echo -e "\e[32m The value of ${i} \e[0m"
 done
