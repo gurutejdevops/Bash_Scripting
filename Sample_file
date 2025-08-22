@@ -15,9 +15,9 @@ echo "The file name is $0"
 read -p "Enter the age:" age
 echo "The age is ${age}"
 
-ACTION=$1
 
-case ${ACTION} in
+
+case $1 in
     start)
         echo "the payment services is started"
         ;;
