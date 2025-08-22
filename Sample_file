@@ -35,7 +35,7 @@ echo "The sum is ${prod}"
 result=$(expr $num1 / $num2)
 echo "The sum is ${prod}"
 
-source Bash_Scripting/function.sh
+source function.sh
 
 function
 
