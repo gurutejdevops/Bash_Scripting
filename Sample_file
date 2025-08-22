@@ -12,3 +12,5 @@ echo -e "\e[32m Line1 \e[0m"
 echo "Line2"
 echo "x is ${x}"
 echo "The file name is $0"
+read -p "Enter the age:" age
+echo "The age is ${age}"
