@@ -17,8 +17,6 @@ echo -n "Root access checking:"
 if [ ${USER_ID} != root ]; then
 
     echo "The run the script with sudo access"
-else
-    echo "script ran by root user"
 fi
 
 stat $?
