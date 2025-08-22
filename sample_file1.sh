@@ -14,10 +14,7 @@ stat()
 
 echo -n -e "Root access checking: \n" 
 
-if [ ${USER_ID} != root ]; then
-
-    echo "The run the script with sudo access"
-fi
+echo "The run the script with sudo access"
 
 stat $?
 
