@@ -12,11 +12,12 @@ stat()
     fi
 }
 
-echo -n -e "Root access checking:" 
+echo -e -n "\e[33m Installing nginx \e[0m"
 
-echo "The run the script with sudo access"
+yum install nginx -y &>> LOGFILE.txt
 
 stat $?
+
 
 
 
