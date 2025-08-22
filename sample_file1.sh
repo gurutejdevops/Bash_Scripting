@@ -12,7 +12,7 @@ stat()
     fi
 }
 
-echo -n -e "Root access checking: \n" 
+echo -n -e "Root access checking:" 
 
 echo "The run the script with sudo access"
 
