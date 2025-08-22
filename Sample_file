@@ -12,14 +12,9 @@ echo -e "\e[32m Line1 \e[0m"
 echo "Line2"
 echo "x is ${x}"
 echo "The file name is $0"
-read -p "Enter the age:" age
-echo "The age is ${age}"
 
 
-if [ $1 -eq 20 ]; then
-    echo "The value is $1"
-elif [ $1 -le 20 ]; then
-    echo "The value is less than $1"
-else
-    echo "The value is greater than 20"
-fi
+for var in 10 20 30 40 50; do
+echo "The value of $var"
+done
+
