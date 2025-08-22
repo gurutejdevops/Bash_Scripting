@@ -10,4 +10,4 @@ echo -e "\e[32m the date is ${date} \e[0m"
 echo -e "\e[32m Line1 \e[0m"
 echo "Line2"
 echo "x is ${x}"
-echo "$0"
+echo $0
