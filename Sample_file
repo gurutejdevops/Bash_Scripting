@@ -14,3 +14,17 @@ echo "x is ${x}"
 echo "The file name is $0"
 read -p "Enter the age:" age
 echo "The age is ${age}"
+
+ACTION=$1
+
+case ${ACTION} in
+    start)
+        echo "the payment services is started"
+        ;;
+    stop)
+        echo "The services are stooped"
+        ;;
+    *)
+        echo "Please select start or stop"
+        ;;
+esac
