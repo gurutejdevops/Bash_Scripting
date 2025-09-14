@@ -48,7 +48,7 @@
 #         ;;
 # esac
 
-if [ -f /etc/passwd ]
+if [ -f /etc/passwdd ]
 then
    echo "File exists"
    exit 0
