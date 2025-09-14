@@ -116,6 +116,8 @@ echo "The value of c is $DIFF"
 echo "The value of c is $MUL"
 echo "The value of c is $DIV"
 
+read -s -p "enter the name:" name
+echo "The name is ${name}"
 
 
 
