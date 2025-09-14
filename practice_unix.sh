@@ -61,7 +61,7 @@
 
 a=teja
 
-if [ $a == guru ]
+if [ "$a" == "guru" ]
 then
    echo "condition is not satisfied"
 fi
