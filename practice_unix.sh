@@ -59,9 +59,15 @@
 #     echo -e "\e[32m The conditions were not stastified \e[0m"
 # fi
 
-a="teja"
+# a="teja"
 
-if [ "${a}" == "guru" ]
-then
-   echo "condition is not satisfied"
+# if [ "${a}" == "guru" ]
+# then
+#    echo "condition is not satisfied"
+# fi
+
+if [ -w ~/details_passwd ]; then
+    echo "File is writable"
+else
+    echo "File is not writable"
 fi
