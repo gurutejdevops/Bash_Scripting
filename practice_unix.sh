@@ -25,4 +25,10 @@ echo "The result of last execution command is $?"
 read -p "Enter the name:" name
 echo -e "\e[32m The name is ${name} \e[0m"
 
+f() {
+    
+    echo "the below message from function f"
+    echo "Welcome to f function universe"
+}
 
+f
