@@ -53,7 +53,11 @@
 ACTION=$1
 
 if [ ${ACTION} == start ]; then
-    echo "The the argumnet one is start"
+    echo "The the argumnet entered is start"
+elif [ ${ACTION} == stop ]; then
+    echo "The the argumnet entered is stop"
+elif [ ${ACTION} == restart ]; then
+    echo "The the argumnet entered is restart"
 else
-    echo "The the argumnet one is not start"
+    echo "The the argumnet one is not start, stop and restart"
 fi
