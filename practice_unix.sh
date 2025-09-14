@@ -75,3 +75,13 @@ if [ -w ~/details_passwd ]; then
 else
     echo "File is not writable"
 fi
+
+for ((a=1;a<=10;a++))
+do
+    echo "Print the value ${a}"
+done
+
+for a -ge 10
+do
+    echo "Print the value ${a}"
+done
