@@ -48,6 +48,6 @@
 #         ;;
 # esac
 
-if [ $1 == start]; then
+if [ $1 == start ]; then
     echo "The the argumnet one is start"
 fi
