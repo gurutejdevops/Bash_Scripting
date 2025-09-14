@@ -59,9 +59,9 @@
 #     echo -e "\e[32m The conditions were not stastified \e[0m"
 # fi
 
-a=teja
+a="teja"
 
-if [ "$a" == "guru" ]
+if [ "${a}" == "guru" ]
 then
    echo "condition is not satisfied"
 fi
