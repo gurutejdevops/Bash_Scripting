@@ -48,16 +48,13 @@
 #         ;;
 # esac
 
+a=10
+b=20
+c=30
 
-
-ACTION=$1
-
-if [ ${ACTION} == start ]; then
-    echo "The the argumnet entered is start"
-elif [ ${ACTION} == stop ]; then
-    echo "The the argumnet entered is stop"
-elif [ ${ACTION} == restart ]; then
-    echo "The the argumnet entered is restart"
+if [ $a -eq 10 ] && [ $b -eq 20 ] && [ $c -eq 30 ]
+then
+    echo "The conditions were stastified"
 else
-    echo "The the argumnet one is not start, stop and restart"
+    echo "The conditions were not stastified"
 fi
