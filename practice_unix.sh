@@ -48,11 +48,6 @@
 #         ;;
 # esac
 
-if [ -f /etc/passwdd ]
-then
-   echo "File exists"
-   exit 0
-else
-   echo "File not found"
-   exit 2
+if [ $1 == start]; then
+    echo "The the argumnet one is start"
 fi
