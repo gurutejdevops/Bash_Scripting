@@ -48,13 +48,20 @@
 #         ;;
 # esac
 
-a=10
-b=20
-c=30
+# a=10
+# b=20
+# c=30
 
-if [ $a -eq 10 ] && [ $b -eq 20 ] && [ $c -eq 30 ]
+# if [ $a -eq 10 ] && ([ $b -eq 20 ] || [ $c -eq 30 ])
+# then
+#     echo -e "\e[32m one conditions were stastified \e[0m"
+# else
+#     echo -e "\e[32m The conditions were not stastified \e[0m"
+# fi
+
+a=teja
+
+if [ $a == guru ]
 then
-    echo "The conditions were stastified"
-else
-    echo "The conditions were not stastified"
+   echo "condition is not satisfied"
 fi
