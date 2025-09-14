@@ -20,4 +20,9 @@ echo -e "\e[32m The script name is $0 \e[0m"
 echo "The arguments are $*"
 echo "The PID value is $$"
 echo "The no.of arguments $#"
+echo "The result of last execution command is $?"
+
+read -p "Enter the name:" name
+echo -e "\e[32m The name is ${name} \e[0m"
+
 
