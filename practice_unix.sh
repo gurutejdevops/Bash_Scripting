@@ -54,4 +54,6 @@ ACTION=$1
 
 if [ ${ACTION} == start ]; then
     echo "The the argumnet one is start"
+else
+    echo "The the argumnet one is not start"
 fi
