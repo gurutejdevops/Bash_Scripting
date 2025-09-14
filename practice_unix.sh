@@ -14,4 +14,10 @@ echo -e "\e[32m The date is ${date} \e[0m"
 echo -e "\e[32m The session_count is ${session_count} \e[0m"
 echo -e "\e[33m The dir is ${dir} \e[0m"
 
+echo -e "\e[32m The value of first argument is $1 \e[0m"
+echo -e "\e[32m the value of second argument is $2 \e[0m"
+echo -e "\e[32m The script name is $0 \e[0m"
+echo "The arguments are $*"
+echo "The PID value is $$"
+echo "The no.of arguments $#"
 
