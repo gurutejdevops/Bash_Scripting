@@ -81,7 +81,12 @@ do
     echo "Print the value ${a}"
 done
 
-for a -ge 10
+for a in {1..10}
+do
+    echo "Print the value ${a}"
+done
+
+for a in $(seq 1 10)
 do
     echo "Print the value ${a}"
 done
