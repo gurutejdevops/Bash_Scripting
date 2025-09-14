@@ -106,15 +106,17 @@
 a=10
 b=20
 
-ADD=$[ a + b ]
-DIFF=$[ a -b ]
-MUL=$[ a * b ]
-DIV=$[ a / b ]
+ADD=$((a + b))
+DIFF=$((a - b))
+MUL=$((a * b))
+DIV=$((a / b))
 
 echo "The value of c is $ADD"
 echo "The value of c is $DIFF"
 echo "The value of c is $MUL"
 echo "The value of c is $DIV"
+
+
 
 
 
