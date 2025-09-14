@@ -22,13 +22,28 @@ echo "The PID value is $$"
 echo "The no.of arguments $#"
 echo "The result of last execution command is $?"
 
-read -p "Enter the name:" name
-echo -e "\e[32m The name is ${name} \e[0m"
+# read -p "Enter the name:" name
+# echo -e "\e[32m The name is ${name} \e[0m"
 
 f() {
-    
+
     echo "the below message from function f"
     echo "Welcome to f function universe"
 }
 
 f
+
+case $3 in
+    start)
+        echo "The payment service is started"
+        ;;
+    stop)
+        echo "The payment service is stopped"
+        ;;
+    restart)
+        echo "The payment service is re-started"
+        ;;
+    *)
+        echo "Please select correct option start, stop or restart"
+        ;;
+esac
