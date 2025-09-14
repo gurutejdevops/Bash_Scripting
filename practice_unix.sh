@@ -94,6 +94,12 @@
 a=10
 b=20
 let c=$a+$b
+let d=$a-$b
+let e=$a*$b
+let f=$a/$b
 
 echo "The value of c is $c"
+echo "The value of c is $d"
+echo "The value of c is $e"
+echo "The value of c is $f"
 
