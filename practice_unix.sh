@@ -66,6 +66,10 @@
 #    echo "condition is not satisfied"
 # fi
 
+user=$(whoami)
+
+echo "The user is ${user}"
+
 if [ -w ~/details_passwd ]; then
     echo "File is writable"
 else
