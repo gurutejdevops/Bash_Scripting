@@ -48,6 +48,10 @@
 #         ;;
 # esac
 
-if [ $1 == start ]; then
+
+
+ACTION=$1
+
+if [ ${ACTION} == start ]; then
     echo "The the argumnet one is start"
 fi
