@@ -48,10 +48,11 @@
 #         ;;
 # esac
 
-mkdir /tmp/testdir
-if [ $? -eq 0 ]
+if [ -f /etc/passwd ]
 then
-   echo "Directory created successfully"
+   echo "File exists"
+   exit 0
 else
-   echo "Failed to create directory"
+   echo "File not found"
+   exit 2
 fi
