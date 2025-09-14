@@ -66,27 +66,34 @@
 #    echo "condition is not satisfied"
 # fi
 
-user=$(whoami)
+# user=$(whoami)
 
-echo "The user is ${user}"
+# echo "The user is ${user}"
 
-if [ -w ~/details_passwd ]; then
-    echo "File is writable"
-else
-    echo "File is not writable"
-fi
+# if [ -w ~/details_passwd ]; then
+#     echo "File is writable"
+# else
+#     echo "File is not writable"
+# fi
 
-for ((a=1;a<=10;a++))
-do
-    echo "Print the value ${a}"
-done
+# for ((a=1;a<=10;a++))
+# do
+#     echo "Print the value ${a}"
+# done
 
-for a in {1..10}
-do
-    echo "Print the value ${a}"
-done
+# for a in {1..10}
+# do
+#     echo "Print the value ${a}"
+# done
 
-for a in $(seq 1 10)
-do
-    echo "Print the value ${a}"
-done
+# for a in $(seq 1 10)
+# do
+#     echo "Print the value ${a}"
+# done
+
+a=10
+b=20
+c=$a+$b
+
+echo "The value of c is $c"
+
