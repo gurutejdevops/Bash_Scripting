@@ -91,15 +91,30 @@
 #     echo "Print the value ${a}"
 # done
 
+# a=10
+# b=20
+# let c=$a+$b
+# let d=$a-$b
+# let e=$a*$b
+# let f=$a/$b
+
+# echo "The value of c is $c"
+# echo "The value of c is $d"
+# echo "The value of c is $e"
+# echo "The value of c is $f"
+
 a=10
 b=20
-let c=$a+$b
-let d=$a-$b
-let e=$a*$b
-let f=$a/$b
 
-echo "The value of c is $c"
-echo "The value of c is $d"
-echo "The value of c is $e"
-echo "The value of c is $f"
+ADD=$[ a + b ]
+DIFF=$[ a -b ]
+MUL=$[ a * b ]
+DIV=$[ a / b ]
+
+echo "The value of c is $ADD"
+echo "The value of c is $DIFF"
+echo "The value of c is $MUL"
+echo "The value of c is $DIV"
+
+
 
