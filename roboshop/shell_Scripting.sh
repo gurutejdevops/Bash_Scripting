@@ -125,7 +125,7 @@ echo "Hai from Comments"
 
 a=10
 
-if [ ${a} -eq 10 ]; then
+if [ ${a} -eq 20 ]; then
     echo "The value of a is ${a}"
 else
     echo "All right its ok"
