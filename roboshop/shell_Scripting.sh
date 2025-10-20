@@ -170,7 +170,7 @@ echo "Hai from Comments"
 
 user_id="$(id -u)"
 
-if [ user_id -ne 1000 ]; then
+if [ ${user_id} -ne 1000 ]; then
     echo "Required privileges are not there to execute the script"
 else
     echo "Procced with the execution because ur user id is ${user_id}"
