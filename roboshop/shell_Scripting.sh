@@ -5,3 +5,4 @@
 #sh <scriptname.sh>
 #./<scriptname.sh>
 
+echo $SHELL
