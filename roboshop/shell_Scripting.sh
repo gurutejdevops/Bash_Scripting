@@ -6,3 +6,4 @@
 #./<scriptname.sh>
 
 echo $SHELL
+echo "Welcome to Linux Shell Scripting practice again"
