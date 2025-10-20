@@ -61,7 +61,7 @@
 # sample
 
 #Loops
-
+<<COMMENT
 ACTION=$1
 
 case ${ACTION} in
@@ -78,3 +78,15 @@ case ${ACTION} in
         echo "Select the proper service"
         ;;
 esac
+COMMENT
+
+if [ $1 == "start"]; then
+    echo -e "\e[32m if Start the payment services \e[0m"
+else if [ $1 == "stop"]; then
+    echo -e "\e[32m if Stop the payment services \e[0m"
+else if [ $1 == "restart"]; then
+    echo -e "\e[32m if re-Start the payment services \e[0m"
+else
+    echo -e "\e[32m if Select the proper services \e[0m"
+fi
+
