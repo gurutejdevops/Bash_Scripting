@@ -133,7 +133,7 @@ echo "Hai from Comments"
 
 VAR=$1
 
-if [ -n $VAR ]; then
+if [ -n ${VAR} ]; then
     echo "This is true the var holding the data of ${VAR}" 
 else
     echo "This is true the not holding the data"
