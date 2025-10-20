@@ -184,12 +184,22 @@ stat() {
     fi
 }
 
-user_name="$(whoami)"
+# user_name="$(whoami)"
 
-if [ ${user_name} != "ec2-user" ]; then
-    echo "Required privileges are not there to execute the script ${user_name}"
+# if [ ${user_name} != "ec2-user" ]; then
+#     echo "Required privileges are not there to execute the script ${user_name}"
+# else
+#     echo "Procced with the execution because ur user name is ${user_name}"
+# fi
+
+# stat $?
+
+APPUSER=roboshop
+
+id ${APPUSER}
+
+if [  $? -eq 0 ]; then
+    echo "Application user is already Available"
 else
-    echo "Procced with the execution because ur user name is ${user_name}"
+    useradd ${APPUSER}
 fi
-
-stat $?
