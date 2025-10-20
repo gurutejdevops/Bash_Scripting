@@ -168,10 +168,18 @@ echo "Hai from Comments"
 # let sum=num1+num2
 # echo "The addition of num1 and num2 is ${sum}";
 
-user_id="$(id -u)"
+# user_id="$(id -u)"
 
-if [ ${user_id} -ne 1000 ]; then
+# if [ ${user_id} -ne 1000 ]; then
+#     echo "Required privileges are not there to execute the script"
+# else
+#     echo "Procced with the execution because ur user id is ${user_id}"
+# fi
+
+user_name="$(whoami)"
+
+if [ ${user_name} != "root" ]; then
     echo "Required privileges are not there to execute the script"
 else
-    echo "Procced with the execution because ur user id is ${user_id}"
+    echo "Procced with the execution because ur user name is ${user_name}"
 fi
