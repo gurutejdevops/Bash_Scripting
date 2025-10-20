@@ -131,13 +131,17 @@ echo "Hai from Comments"
 #     echo "value of a is not 10"
 # fi
 
+# VAR=10
 
-if [ -n ${VAR} ]; then
-    echo "This is true the var holding the data of ${VAR}" 
-else
-    echo "This is true the not holding the data"
+# if [ -n ${VAR} ]; then
+#     echo "This is true the var holding the data of ${VAR}"   
+# else
+#     echo "This is true the not holding the data"
+# fi
+
+
+if [ -w /home/ec2-user/Bash_Scripting/roboshop/shell_Scripting.sh ]; then
+    echo "The user writable permission"
+else 
+    echo "The user has not writable permission"
 fi
-
-
-
-
