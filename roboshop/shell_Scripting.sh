@@ -123,12 +123,20 @@ echo "Hai from Comments"
 # fi
 
 
-a=10
+# a=10
 
-if [ ! ${a} -eq 10 ]; then
-    echo "The value of a is 10"
+# if [ ! ${a} -eq 10 ]; then
+#     echo "The value of a is 10"
+# else
+#     echo "value of a is not 10"
+# fi
+
+VAR=$1
+
+if [ -n $VAR ]; then
+    echo "This is true the var holding the data of ${VAR}" 
 else
-    echo "value of a is not 10"
+    echo "This is true the not holding the data"
 fi
 
 
