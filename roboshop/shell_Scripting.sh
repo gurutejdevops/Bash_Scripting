@@ -152,6 +152,6 @@ echo "Hai from Comments"
 #     echo " The value of var is ${var}" 
 # done
 
-for var in $(seq 1 10); do
+for var in [1..10]; do
     echo "The value of var is ${var}"
 done
