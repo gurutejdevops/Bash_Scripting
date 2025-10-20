@@ -194,12 +194,49 @@ stat() {
 
 # stat $?
 
-APPUSER=roboshop
+# APPUSER=roboshop
 
-id ${APPUSER}
+# id ${APPUSER}
 
-if [  $? -eq 0 ]; then
-    echo "Application user is already Available"
+# if [  $? -eq 0 ]; then
+#     echo "Application user is already Available"
+# else
+#     useradd ${APPUSER}
+# fi
+
+if [ a == a ]; then
+    echo "First check pass"
 else
-    useradd ${APPUSER}
+    echo "First check fail"
+    overall=1
 fi
+
+if [ b == b ]; then
+    echo "Second check pass"
+else
+    echo "Second check fail"
+    overall=1
+fi
+
+if [ c == b ]; then
+    echo "Third check pass"
+else
+    echo "Third check fail"
+    overall=1
+fi
+
+if [ d == d ]; then
+    echo "Fourth check pass"
+else
+    echo "Fourth check fail"
+    overall=1
+fi
+
+if [ $overall -eq 0 ]; then
+    echo "All conditions passed"
+    exit 0
+else
+    echo "All conditions are not passed"
+    exit 1
+fi
+
