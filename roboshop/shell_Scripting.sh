@@ -22,7 +22,7 @@ echo -e "\e[34m The value of c is ${c} \e[0m"
 echo -e "\e[35m The value of y is ${y} \e[0m"
 
 date="${date}"
-session_count="${who|wc -l}"
+session_count="${who | wc -l}"
 dir="${pwd}"
 
 echo -e "\e[32m The date is ${date} \e[0m"
