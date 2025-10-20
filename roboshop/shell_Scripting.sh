@@ -140,8 +140,12 @@ echo "Hai from Comments"
 # fi
 
 
-if [ ! -w /home/ec2-user/Bash_Scripting/roboshop/shell_Scripting.sh ]; then
-    echo "The user writable permission"
-else 
-    echo "The user has not writable permission"
-fi
+# if [ ! -w /home/ec2-user/Bash_Scripting/roboshop/shell_Scripting.sh ]; then
+#     echo "The user writable permission"
+# else 
+#     echo "The user has not writable permission"
+# fi
+
+for var in 10 20 30 40 50; do
+    echo " The value of var is ${var}" 
+done
