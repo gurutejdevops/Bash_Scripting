@@ -82,11 +82,15 @@
 
 if [ $1 == "start" ]; then
     echo -e "\e[32m if Start the payment services \e[0m"
+    exit 0
 elif [ $1 == "stop" ]; then
-      echo -e "\e[32m if Stop the payment services \e[0m"
+    echo -e "\e[32m if Stop the payment services \e[0m"
+    exit 1
 elif [ $1 == "restart" ]; then
     echo -e "\e[32m if re-Start the payment services \e[0m"
+    exit 2
 else
     echo -e "\e[32m if Select the proper services \e[0m"
+    exit 3
 fi
 
