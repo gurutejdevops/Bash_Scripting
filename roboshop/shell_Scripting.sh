@@ -131,7 +131,7 @@ echo "Hai from Comments"
 #     echo "value of a is not 10"
 # fi
 
-VAR=$1
+VAR=10
 
 if [ -n ${VAR} ]; then
     echo "This is true the var holding the data of ${VAR}" 
