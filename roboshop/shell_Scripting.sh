@@ -177,7 +177,7 @@ echo "Hai from Comments"
 # fi
 
 stat() {
-    if [ $? -eq 0 ]; then
+    if [ $1 -eq 0 ]; then
         echo "Success"
     else 
         echo "failur"
@@ -187,9 +187,9 @@ stat() {
 user_name="$(whoami)"
 
 if [ ${user_name} != "ec2-user" ]; then
-    echo "Required privileges are not there to execute the script"
+    echo "Required privileges are not there to execute the script ${user_name}"
 else
     echo "Procced with the execution because ur user name is ${user_name}"
 fi
 
-stat
+stat $?
