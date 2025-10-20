@@ -186,7 +186,7 @@ stat() {
 
 user_name="$(whoami)"
 
-if [ ${user_name} != "root" ]; then
+if [ ${user_name} != "ec2-user" ]; then
     echo "Required privileges are not there to execute the script"
 else
     echo "Procced with the execution because ur user name is ${user_name}"
