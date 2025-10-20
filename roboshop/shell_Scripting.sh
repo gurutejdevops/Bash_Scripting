@@ -62,7 +62,9 @@
 
 #Loops
 
-case $1 in
+ACTION=$1
+
+case ${ACTION} in
     start)
         echo "Start the payment services"
         ;;
