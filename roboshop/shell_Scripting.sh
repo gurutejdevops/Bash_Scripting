@@ -32,3 +32,9 @@
 # The Default Arguments
 
 echo -e "\e[32m The script name is $0 \e[0m"
+echo -e "\e[33m The Value of argument1 is $1 \e[0m"
+echo -e "\e[34m The value of argument2 is $2 \e[0m"
+echo -e "\e[35m The no.of agruments passed is $# \e[0m"
+echo -e "\e[36m The arguments are $@ \e[0m"
+echo -e "\e[37m the PID is $$ \e[0m"
+echo -e "\e[38 The result of last command is $? \e[0m"
