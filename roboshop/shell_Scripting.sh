@@ -44,18 +44,35 @@
 
 # functions
 
-f() {
-    echo -e "\e[32m Hai From f() function \e[0m"
-    echo "....................."
-    echo -e "\e[33m Bye from the f() function \e[0m"
-}
+# f() {
+#     echo -e "\e[32m Hai From f() function \e[0m"
+#     echo "....................."
+#     echo -e "\e[33m Bye from the f() function \e[0m"
+# }
 
-sample() {
-    
-    echo -e "\e[32m Hai From sample() function \e[0m"
-    echo "....................."
-    echo -e "\e[33m Bye from the sample() function \e[0m"
+# sample() {
 
-    f
-}
-sample
+#     echo -e "\e[32m Hai From sample() function \e[0m"
+#     echo "....................."
+#     echo -e "\e[33m Bye from the sample() function \e[0m"
+
+#     f
+# }
+# sample
+
+#Loops
+
+case $1 in
+    start)
+        echo "Start the payment services"
+        ;;
+    stop)
+        echo "Stop the payment services"
+        ;;
+    restart)
+        echo "Restart the payment service"
+        ;;
+    *)
+        echo "Select the proper service"
+        ;;
+esac
