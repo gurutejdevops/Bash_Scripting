@@ -7,4 +7,4 @@
 
 echo $SHELL
 echo "Welcome to Linux Shell Scripting practice again"
-echo -e "welcome to \n Linux Shell Scripting \n practice again"
+echo -e "\e[32m welcome to \n Linux Shell Scripting \n practice again \e[0m"
