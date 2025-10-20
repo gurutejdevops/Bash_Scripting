@@ -176,6 +176,13 @@ echo "Hai from Comments"
 #     echo "Procced with the execution because ur user id is ${user_id}"
 # fi
 
+stat() {
+    if [ $? -eq 0 ]; then
+        echo "Success"
+    else 
+        echo "failur"
+}
+
 user_name="$(whoami)"
 
 if [ ${user_name} != "root" ]; then
@@ -183,3 +190,5 @@ if [ ${user_name} != "root" ]; then
 else
     echo "Procced with the execution because ur user name is ${user_name}"
 fi
+
+stat
