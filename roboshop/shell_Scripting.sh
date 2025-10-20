@@ -152,10 +152,18 @@ echo "Hai from Comments"
 #     echo " The value of var is ${var}" 
 # done
 
-for var in {1..10}; do
-    echo "The value of var is ${var}"
-done
+# for var in {1..10}; do
+#     echo "The value of var is ${var}"
+# done
 
-for var in $(seq 1 10); do
-    echo "The value of var is ${var}"
-done
+# for var in $(seq 1 10); do
+#     echo "The value of var is ${var}"
+# done
+
+#"let" allows you to treat variables like numbers and perform calculations.
+
+num1=20
+num2=30
+
+let sum=num1+num2
+echo "The addition of num1 and num2 is ${sum}";
