@@ -38,3 +38,6 @@ echo -e "\e[35m The no.of agruments passed is $# \e[0m"
 echo -e "\e[36m The arguments are $@ \e[0m"
 echo -e "\e[37m the PID is $$ \e[0m"
 echo -e "\e[38 The result of last command is $? \e[0m"
+
+read -p "Enter the Surname" surname
+echo -e "\e[39m The surname is ${surname} \e[0m"
