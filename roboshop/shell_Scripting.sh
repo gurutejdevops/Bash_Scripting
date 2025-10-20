@@ -50,4 +50,12 @@ f() {
     echo -e "\e[33m Bye from the f() function \e[0m"
 }
 
-f
+sample() {
+    
+    echo -e "\e[32m Hai From sample() function \e[0m"
+    echo "....................."
+    echo -e "\e[33m Bye from the sample() function \e[0m"
+
+    f
+}
+sample
