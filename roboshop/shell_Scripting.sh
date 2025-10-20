@@ -146,6 +146,8 @@ echo "Hai from Comments"
 #     echo "The user has not writable permission"
 # fi
 
-for var in 10 20 30 40 50; do
+numbers="1 2 3 5 6 7 8"
+
+for var in $numbers; do
     echo " The value of var is ${var}" 
 done
