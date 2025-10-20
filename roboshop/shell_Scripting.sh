@@ -181,6 +181,7 @@ stat() {
         echo "Success"
     else 
         echo "failur"
+    fi
 }
 
 user_name="$(whoami)"
