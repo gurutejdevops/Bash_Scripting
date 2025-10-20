@@ -125,10 +125,10 @@ echo "Hai from Comments"
 
 a=10
 
-if [ ${a} -eq 10 ]; then
+if [ ! ${a} -eq 10 ]; then
     echo "The value of a is 10"
 else
-    echo "All right its ok"
+    echo "value of a is not 10"
 fi
 
 
