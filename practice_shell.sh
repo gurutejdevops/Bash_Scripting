@@ -30,3 +30,6 @@ echo "ur age is $2"
 echo "The argument details are $@"
 echo "The no.of arguments are $#"
 echo "The PID is $$"
+
+read -p "Welcome to Villa:" villa_name
+echo -e "\e[32m The villa name is ${villa_name} \e[0m"
