@@ -40,5 +40,14 @@ f() {
     echo "Bye from f() function"
 }
 
-f
+
+
+sample() {
+    echo "Hello from sample() function"
+    echo "................"
+    echo "Bye from sample() function"
+    f
+}
+
+sample 
 
