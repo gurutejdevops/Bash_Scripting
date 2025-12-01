@@ -33,3 +33,9 @@ echo "The PID is $$"
 
 read -p "Welcome to Villa:" villa_name
 echo -e "\e[32m The villa name is ${villa_name} \e[0m"
+
+f() {
+    echo "Hello from f() function"
+}
+
+f
