@@ -26,3 +26,7 @@ echo $0
 echo $?
 echo "ur name is $1"
 echo "ur age is $2"
+
+echo "The argument details are $@"
+echo "The no.of arguments are $#"
+echo "The PID is $$"
