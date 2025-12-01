@@ -21,3 +21,8 @@ session_count="$(who|wc -l)"
 echo -e "\e[32m today date is ${date} \e[0m"
 echo -e "\e[33m current dire is ${dir} \e[0m"
 echo -e "\e[34m the current session count is ${session_count} \e[0m"
+
+echo $0
+echo $?
+echo "ur name is $1"
+echo "ur age is $2"
