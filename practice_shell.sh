@@ -126,3 +126,8 @@ for var in a b c d e f; do
 echo "The value of ${var}"
 done
 
+for var in {1..10}
+do
+    echo "The value of ${var}"
+done
+
