@@ -1,5 +1,3 @@
-#!/bin/bash
-
 user_id="$(whoami)"
 
 if [ ${user_id} != root ]; then 
