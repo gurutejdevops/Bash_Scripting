@@ -152,3 +152,9 @@ num2=20
 
  let sum=num1+num2
  echo -e "\e[32m The value of sum is ${sum} \e[0m"
+
+ f() {
+    echo "Hi from f() function"
+    echo "...................."
+    echo "Bye from f() function"
+ }
