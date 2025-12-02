@@ -135,3 +135,10 @@ for var in $(seq 1 10)
 do 
     echo "The value of ${var}"
 done
+
+a=1
+while [ $a -le 10 ]
+do
+    echo "The value of a is ${a}"
+    a=$((a+1))
+done
