@@ -5,6 +5,7 @@ stat() {
         echo -e "\e[32m Success \e[0m"
     else
         echo -e "\e[33m Failure \e[0m"
+    fi
 }   
 
 user_id="$(whoami)"
