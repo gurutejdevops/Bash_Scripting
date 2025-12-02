@@ -73,17 +73,21 @@ ACTION=$1
 if [ "${ACTION}" == "start" ]; then
 
     echo -e "\e[32m The payment services started \e[0m"
+    exit 0
 
 elif [ "${ACTION}" == "stop" ]; then
 
     echo -e "\e[33m The payment services stopped \e[0m"
+    exit 1
 
 elif [ "${ACTION}" == "restart" ]; then
 
     echo -e "\e[34m The payment services restarted \e[0m"
+    exit 2
 else
 
     echo -e "\e[35m Select the correct answer \e[0m"
+    exit 3
 fi 
 
 
