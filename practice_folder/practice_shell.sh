@@ -158,3 +158,5 @@ num2=20
     echo "...................."
     echo "Bye from f() function"
  }
+
+f
