@@ -26,11 +26,28 @@ stat $?
 # sed -ie 's/127.0.0.1/0.0.0.0/g' ~/mango.conf
 # stat $?
 
-APPUSER=roboshop
+# APPUSER=roboshop
 
-id ${APPUSER}
-if [ $? -eq 0 ]; then
-    echo "The ${APPUSER} is already available"
+# id ${APPUSER}
+# if [ $? -eq 0 ]; then
+#     echo "The ${APPUSER} is already available"
+# else
+#     useradd ${APPUSER}
+# fi
+
+overall=0
+
+if [ a = a]; then
+echo "Condition1 Pass"
 else
-    useradd ${APPUSER}
+echo "Condition1 Fail"
+overall=1
+
+
+if [ ${overall} -eq 0 ]; then
+echo "ALL CHECKS PASSED"
+exit 0
+else
+echo "some checks failed"
+exit 1
 fi
