@@ -108,7 +108,7 @@ COMMENT
 #     echo "The value of a is ${a} ............"
 # fi
 
-VAR="$(cat ~/practice_shell)"
+VAR="$(cat practice_shell.sh)"
 
 if [ -n "${VAR}" ]; then
     echo "The file has content"
