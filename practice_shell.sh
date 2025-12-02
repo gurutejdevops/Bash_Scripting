@@ -51,3 +51,18 @@ sample() {
 
 sample 
 
+case $1 in
+    start)
+        echo "The payment services started"
+        ;;
+    stop)
+        echo "The payment services stopped"
+        ;;
+    restart)
+        echo "The payment services re-started"
+        ;;
+    *)
+        echo "Please select the correct 
+esac 
+
+
