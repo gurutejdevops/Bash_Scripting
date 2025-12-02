@@ -19,11 +19,7 @@ fi
 stat $?
 
 echo -e "\e[32m Configuring the nginx \e[0m"
-echo -e -n "\e[35m Installing the nginx \e[0m"
-yum install nginx -y &>> output.log
+echo -e -n "\e[35m UNInstalling the nginx \e[0m"
+yum remove nginx -y &>> output.log
 stat $?
 
-echo -n "starting nginx"
-systemctl enable nginx &>> output.log
-systemctl start nginx &>> output.log
-stat $?
