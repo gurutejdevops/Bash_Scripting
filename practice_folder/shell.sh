@@ -18,10 +18,19 @@ fi
 
 stat $?
 
-echo -e "\e[32m Configuring the nginx \e[0m"
-echo -e -n "\e[35m UNInstalling the nginx \e[0m"
-yum remove nginx -y &>> output.log
-stat $?
+# echo -e "\e[32m Configuring the nginx \e[0m"
+# echo -e -n "\e[35m UNInstalling the nginx \e[0m"
+# yum remove nginx -y &>> output.log
+# stat $?
 
-sed -ie 's/127.0.0.1/0.0.0.0/g' ~/mango.conf
-stat $?
+# sed -ie 's/127.0.0.1/0.0.0.0/g' ~/mango.conf
+# stat $?
+
+APPUSER=roboshop
+
+id ${APPUSER}
+if [ $? -eq 0 ]; then
+    echo "The ${APPUSER} is already available"
+else
+    useradd ${APPUSER}
+fi
