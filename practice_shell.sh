@@ -131,7 +131,7 @@ do
     echo "The value of ${var}"
 done
 
-for var in ${seq 1 10}
+for var in $(seq 1 10)
 do 
     echo "The value of ${var}"
 done
