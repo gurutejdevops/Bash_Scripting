@@ -102,7 +102,7 @@ c=30
 #     echo "At least one condition failed"
 # fi
 
-if [ ${a} -eq 10 ]; then
+if [ ! ${a} -eq 10 ]; then
     echo "The value of a is ${a}"
 else
     echo "The value of a is ${a} ............"
