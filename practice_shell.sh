@@ -103,8 +103,8 @@ c=30
 # fi
 
 if [ ${a} -eq 10 ]; then
-    ehco "The value of a is ${a}"
+    echo "The value of a is ${a}"
 else
-    echo " The value of a is ${a} ............"
+    echo "The value of a is ${a} ............"
 fi
 
