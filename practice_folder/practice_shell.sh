@@ -161,4 +161,3 @@ num2=20
 
 f
 
-sed -i -e "/bash/s/practice_shell/shell/" wrapper.sh
