@@ -136,12 +136,19 @@ COMMENT
 #     echo "The value of ${var}"
 # done
 
-a=1
-while [ $a -le 10 ]
-do
-    echo "The value of a is ${a}"
-    a=$((a+1))
-done
+# a=1
+# while [ $a -le 10 ]
+# do
+#     echo "The value of a is ${a}"
+#     a=$((a+1))
+# done
 
-b=$1
-echo "The value of b is ${b}"
+# b=$1
+# echo "The value of b is ${b}"
+
+
+num1=10
+num2=20
+
+ let sum=num1+num2
+ echo -e "\e[32m The value of sum is ${sum} \e[0m"
