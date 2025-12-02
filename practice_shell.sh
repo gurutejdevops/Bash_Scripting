@@ -116,4 +116,10 @@ else
     echo "The file has no content"
 fi
 
+if [ -f practice_shell.sh ]; then
+    echo "The file is available"
+else
+    echo "The file is not available"
+fi
+
 
