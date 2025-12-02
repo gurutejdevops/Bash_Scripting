@@ -36,15 +36,16 @@ stat $?
 # fi
 
 overall=0
+a=10
 
-if [ a = a ]; then
+if [ ${a} -eq 10 ]; then
 echo "Condition1 Pass"
 else
 echo "Condition1 Fail"
 overall=1
 
 
-if [ "${overall}" -eq 0 ]; then
+if [ ${overall} -eq 0 ]; then
     echo "ALL CHECKS PASSED"
     exit 0
 else
