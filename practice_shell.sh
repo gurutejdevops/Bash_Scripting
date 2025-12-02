@@ -1,3 +1,4 @@
+<<COMMENT
 echo "Welcome to Shell Scripting"
 echo -e "Welcome to \n shell scripting \t Guru"
 echo -e "\e[32m This is Guru Theja \e[0m"
@@ -89,5 +90,16 @@ else
     echo -e "\e[35m Select the correct answer \e[0m"
     exit 3
 fi 
+COMMENT
+
+a=10
+b=20
+c=30
+
+if [ ${a} -eq 10 ] &&  [ ${b} -eq 20 ] && [ ${c} -eq 30 ]; then
+    echo "All three comdition OK"
+else
+    echo "At least one condition failed"
+fi
 
 
