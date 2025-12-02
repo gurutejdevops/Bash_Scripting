@@ -23,3 +23,5 @@ echo -e -n "\e[35m UNInstalling the nginx \e[0m"
 yum remove nginx -y &>> output.log
 stat $?
 
+sed -ie 's/127.0.0.1/0.0.0.0/g' mango.conf
+stat $?
