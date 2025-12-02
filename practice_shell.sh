@@ -92,9 +92,9 @@ else
 fi 
 COMMENT
 
-a=10
-b=20
-c=30
+# a=10
+# b=20
+# c=30
 
 # if ([ ${a} -eq 10 ] ||  [ ${b} -eq 30 ]) && [ ${c} -eq 30 ]; then
 #     echo "All two comdition OK"
@@ -102,9 +102,18 @@ c=30
 #     echo "At least one condition failed"
 # fi
 
-if [ ! ${a} -eq 10 ]; then
-    echo "The value of a is ${a}"
+# if [ ! ${a} -eq 10 ]; then
+#     echo "The value of a is ${a}"
+# else
+#     echo "The value of a is ${a} ............"
+# fi
+
+VAR="$(cat ~/practice_shell)"
+
+if [ -n "${VAR}" ]; then
+    echo "The file has content"
 else
-    echo "The value of a is ${a} ............"
+    echo "The file has no content"
 fi
+
 
