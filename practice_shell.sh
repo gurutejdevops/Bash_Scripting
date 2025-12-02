@@ -62,7 +62,8 @@ case $1 in
         echo "The payment services re-started"
         ;;
     *)
-        echo "Please select the correct 
+        echo "Please select the correct"
+        ;;
 esac 
 
 
