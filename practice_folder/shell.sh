@@ -37,7 +37,7 @@ stat $?
 
 overall=0
 
-if [ a = a]; then
+if [ a = a ]; then
 echo "Condition1 Pass"
 else
 echo "Condition1 Fail"
@@ -45,9 +45,9 @@ overall=1
 
 
 if [ "${overall}" -eq 0 ]; then
-echo "ALL CHECKS PASSED"
-exit 0
+    echo "ALL CHECKS PASSED"
+    exit 0
 else
-echo "some checks failed"
-exit 1
+    echo "some checks failed"
+    exit 1
 fi
