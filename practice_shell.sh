@@ -51,7 +51,9 @@ sample() {
 
 sample 
 
-case $1 in
+ACTION=$1
+
+case ${ACTION} in
     start)
         echo "The payment services started"
         ;;
