@@ -37,9 +37,17 @@ stat $?
 
 overall=0
 a=10
+b=10
 
 if [ ${a} -eq 10 ]; then
 echo "Condition1 Pass"
+else
+echo "Condition1 Fail"
+overall=1
+fi
+
+if [ ${b} -eq 20 ]; then
+echo "Condition2 pass"
 else
 echo "Condition1 Fail"
 overall=1
