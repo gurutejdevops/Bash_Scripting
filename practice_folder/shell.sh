@@ -44,7 +44,7 @@ echo "Condition1 Fail"
 overall=1
 
 
-if [ ${overall} -eq 0 ]; then
+if [ "${overall}" -eq 0 ]; then
 echo "ALL CHECKS PASSED"
 exit 0
 else
