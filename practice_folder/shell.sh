@@ -43,6 +43,7 @@ echo "Condition1 Pass"
 else
 echo "Condition1 Fail"
 overall=1
+fi
 
 
 if [ ${overall} -eq 0 ]; then
