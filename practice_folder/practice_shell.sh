@@ -143,3 +143,5 @@ do
     a=$((a+1))
 done
 
+b=$1
+echo "The value of b is ${b}"
