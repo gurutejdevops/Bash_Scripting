@@ -122,19 +122,19 @@ COMMENT
 #     echo "The file is not available"
 # fi
 
-for var in a b c d e f; do
-echo "The value of ${var}"
-done
+# for var in a b c d e f; do
+# echo "The value of ${var}"
+# done
 
-for var in {1..10}
-do
-    echo "The value of ${var}"
-done
+# for var in {1..10}
+# do
+#     echo "The value of ${var}"
+# done
 
-for var in $(seq 1 10)
-do 
-    echo "The value of ${var}"
-done
+# for var in $(seq 1 10)
+# do 
+#     echo "The value of ${var}"
+# done
 
 a=1
 while [ $a -le 10 ]
@@ -142,3 +142,4 @@ do
     echo "The value of a is ${a}"
     a=$((a+1))
 done
+
