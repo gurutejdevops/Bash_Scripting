@@ -108,18 +108,21 @@ COMMENT
 #     echo "The value of a is ${a} ............"
 # fi
 
-VAR="$(cat practice_shell.sh)"
+# VAR="$(cat practice_shell.sh)"
 
-if [ -n "${VAR}" ]; then
-    echo "The file has content"
-else
-    echo "The file has no content"
-fi
+# if [ -n "${VAR}" ]; then
+#     echo "The file has content"
+# else
+#     echo "The file has no content"
+# fi
 
-if [ -f practice_shell.sh ]; then
-    echo "The file is available"
-else
-    echo "The file is not available"
-fi
+# if [ -f practice_shell.sh ]; then
+#     echo "The file is available"
+# else
+#     echo "The file is not available"
+# fi
 
+for var in a b c d e f; do
+echo "The value of ${var}"
+done
 
