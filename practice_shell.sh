@@ -51,21 +51,39 @@ sample() {
 
 sample 
 
+# ACTION=$1
+
+# case ${ACTION} in
+#     start)
+#         echo "The payment services started"
+#         ;;
+#     stop)
+#         echo "The payment services stopped"
+#         ;;
+#     restart)
+#         echo "The payment services re-started"
+#         ;;
+#     *)
+#         echo "Please select the correct"
+#         ;;
+# esac 
+
 ACTION=$1
 
-case ${ACTION} in
-    start)
-        echo "The payment services started"
-        ;;
-    stop)
-        echo "The payment services stopped"
-        ;;
-    restart)
-        echo "The payment services re-started"
-        ;;
-    *)
-        echo "Please select the correct"
-        ;;
-esac 
+if [ "${ACTION}" == "start" ]; then
+
+    echo -e "\e[32m The payment services started \e[0m"
+
+elif [ "${ACTION}" == "stop" ]; then
+
+    echo -e "\e[33m The payment services stopped \e[0m"
+
+elif [ "${ACTION}" == "restart" ]; then
+
+    echo -e "\e[34m The payment services restarted \e[0m"
+else
+
+    echo -e "\e[35m Select the correct answer \e[0m"
+fi 
 
 
