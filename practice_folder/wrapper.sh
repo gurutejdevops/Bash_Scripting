@@ -1,2 +1,9 @@
 #! /bin/bash
-bash practice_shell.sh
+
+user_id="$(whoami)"
+
+if [ ${user_id} != root ]; then 
+    echo  -e "\e[32m script expected to execute by root user or sudo access \e[0m"
+else 
+    echo "proceed with the execution"
+fi
