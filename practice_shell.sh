@@ -96,10 +96,15 @@ a=10
 b=20
 c=30
 
-if ([ ${a} -eq 10 ] ||  [ ${b} -eq 30 ]) && [ ${c} -eq 30 ]; then
-    echo "All two comdition OK"
-else
-    echo "At least one condition failed"
-fi
+# if ([ ${a} -eq 10 ] ||  [ ${b} -eq 30 ]) && [ ${c} -eq 30 ]; then
+#     echo "All two comdition OK"
+# else
+#     echo "At least one condition failed"
+# fi
 
+if [ ${a} -eq 10 ]; then
+    ehco "The value of a is ${a}"
+else
+    echo " The value of a is ${a} ............"
+fi
 
