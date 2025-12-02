@@ -1,2 +1,2 @@
 #! /bin/bash
-bash practice_shell.sh $1
+bash practice_shell.sh
