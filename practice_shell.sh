@@ -96,8 +96,8 @@ a=10
 b=20
 c=30
 
-if [ ${a} -eq 10 ] &&  [ ${b} -eq 20 ] && [ ${c} -eq 30 ]; then
-    echo "All three comdition OK"
+if ([ ${a} -eq 10 ] ||  [ ${b} -eq 30 ]) && [ ${c} -eq 30 ]; then
+    echo "All two comdition OK"
 else
     echo "At least one condition failed"
 fi
